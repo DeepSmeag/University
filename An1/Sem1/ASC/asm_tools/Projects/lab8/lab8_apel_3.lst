@@ -1,0 +1,47 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import scanf msvcrt.dll
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  segment data use32 class=data
+    14                                      ; ...
+    15 00000000 2564202B202564203D-         format_printf db "%d + %d = %d",0
+    15 00000009 20256400           
+    16 0000000D 256420256400                format_scanf db "%d %d", 0
+    17 00000013 00000000                    a dd 0
+    18 00000017 00000000                    b dd 0
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; ...
+    23                                          ; Se dau doua numere naturale a si b (a, b: dword, definite in segmentul de date). Sa se calculeze suma lor si sa se afiseze in urmatorul format: "<a> + <b> = <result>"
+    24                                          ; Exemplu: "1 + 2 = 3"
+    25                                          ; Valorile vor fi afisate in format decimal (baza 10) cu semn.
+    26 00000000 68[17000000]                    push b
+    27 00000005 68[13000000]                    push a
+    28 0000000A 68[0D000000]                    push format_scanf
+    29 0000000F FF15[00000000]                  call [scanf]
+    30 00000015 83C406                          add esp, 3*2
+    31                                          
+    32 00000018 8B1D[17000000]                  mov ebx, [b]
+    33 0000001E 031D[13000000]                  add ebx, [a]
+    34 00000024 83D100                          adc ecx, 0
+    35                                          ;ecx:ebx = a+b
+    36                                          
+    37 00000027 53                              push ebx
+    38 00000028 FF35[17000000]                  push dword [b]
+    39 0000002E FF35[13000000]                  push dword [a]
+    40 00000034 68[00000000]                    push format_printf
+    41 00000039 FF15[00000000]                  call [printf]
+    42 0000003F 83C408                          add esp, 4*2
+    43                                          
+    44                                          ; exit(0)
+    45 00000042 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    46 00000044 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

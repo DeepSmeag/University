@@ -1,0 +1,85 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                  
+    15                                  
+    16 00000000 0A09020704030C0B08-         s1 dd 0702090Ah, 0B0C0304h, 05060108h
+    16 00000009 010605             
+    17                                      l1 equ ($-s1)/2
+    18                                      ; se va obtine:
+    19                                      ; 72h, 9Ah, BCh,  34h, 56h, 18h
+    20                                      ; care se va ordona crescator:
+    21                                      ; 9Ah, 0BCh, 18h, 34h, 56h, 72h
+    22 0000000C 00<rept>                    s2 times l1 db 0
+    23                                      
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          ; ...
+    27                                          ;3. Se da un sir de 3 dublucuvinte, fiecare dublucuvant continand 2 valori pe cuvant (despachetate, deci fiecare cifra hexa e precedata de un 0). Sa se creeze un sir de octeti care sa contina acele valori (i
+    28                                          
+    29 00000000 B906000000                      mov ecx, l1
+    30 00000005 E353                            jecxz sfarsit
+    31                                          
+    32 00000007 BE[00000000]                    mov esi, s1
+    33 0000000C BF[0C000000]                    mov edi, s2
+    34 00000011 FC                              cld
+    35                                          repeta:
+    36 00000012 66AD                                lodsw
+    37 00000014 51                                  push ecx
+    38 00000015 B104                                mov cl, 4
+    39 00000017 66D3E0                              shl AX, cl
+    40 0000001A D2EC                                shr AH, cl
+    41 0000001C 66D3E8                              shr AX, cl ; AL = byte-ul fara 0 dintre worduri
+    42 0000001F AA                                  stosb
+    43 00000020 59                                  pop ecx
+    44 00000021 E2EF                            loop repeta
+    45                                          
+    46 00000023 BE00000000                      mov esi, 0 ; i=0
+    47                                          
+    48                                          for_i:
+    49 00000028 89F7                                mov edi, esi ; j=i
+    50 0000002A 47                                  inc edi ; j =i+1
+    51 0000002B 83FF06                              cmp edi, l1
+    52 0000002E 7D24                                jge sfarsit_for_j
+    53                                              
+    54                                              for_j:
+    55 00000030 8A86[0C000000]                          mov al, [s2+esi] ; a[i]
+    56 00000036 8A9F[0C000000]                          mov bl, [s2+edi] ; a[j]
+    57 0000003C 38D8                                    cmp al, bl
+    58 0000003E 7F02                                    jg swap
+    59 00000040 EB0C                                    jmp next_item
+    60                                                  swap:
+    61 00000042 889E[0C000000]                              mov [s2+esi], bl
+    62 00000048 8887[0C000000]                              mov [s2+edi], al
+    63                                                      
+    64                                                  next_item:
+    65 0000004E 47                                      inc edi
+    66 0000004F 83FF06                              cmp edi, l1
+    67 00000052 7CDC                                jl for_j
+    68                                              sfarsit_for_j:
+    69 00000054 46                                  inc esi
+    70                                              
+    71 00000055 83FE05                              cmp esi, l1-1
+    72 00000058 7CCE                                jl for_i
+    73                                           
+    74                                          ; for(i=0;i<n-1;i++)
+    75                                              ; for(j=i+1;j<n;j++)
+    76                                                  ; if(a[i]>a[j])
+    77                                                      ; swap(a[i],a[j])
+    78                                          
+    79                                          
+    80                                          sfarsit:
+    81                                          
+    82                                          ; exit(0)
+    83 0000005A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    84 0000005C FF15[00000000]                  call    [exit]       ; call exit to terminate the program
