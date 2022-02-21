@@ -1,0 +1,13 @@
+1,title1,author1,1902,10
+2,title2,author2,1903,15
+3,title3,author3,1904,20
+4,title4,author4,1905,25
+5,title5,author5,1906,30
+6,title6,author6,1907,35
+7,title7,author7,1908,40
+8,title8,author8,1909,45
+9,title9,author9,1910,50
+10,title10,author10,1910,55
+11,title11,author11,1915,60
+12,Ion,Rebreanu,12490,124
+100,Cismigiu&Comp,Grigore,1930,9000
