@@ -1,0 +1,89 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, fscanf, printf, fopen         ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import fscanf msvcrt.dll
+    11                                  import printf msvcrt.dll
+    12                                  import fopen msvcrt.dll
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 256300                      format_fscanf db "%c", 0
+    17 00000003 66696E2E74787400            nume_fisier db "fin.txt", 0
+    18 0000000B 7200                        mod_r db "r", 0
+    19 0000000D FFFFFFFF                    descriptor_fisier dd -1
+    20 00000011 4E722E206369667265-         format_printf db "Nr. cifre pare: %d", 0
+    20 0000001A 20706172653A202564-
+    20 00000023 00                 
+    21 00000024 00000000                    nr_cif dd 0
+    22 00000028 00000000                    a dd 0
+    23                                  ; our code starts here
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          ; ...
+    27                                          ;Se da un fisier text. Sa se citeasca continutul fisierului, sa se contorizeze numarul de cifre pare si sa se afiseze aceasta valoare. Numele fisierului text este definit in segmentul de date.
+    28                                          deschidere_fisier:
+    29 00000000 68[0B000000]                        push mod_r
+    30 00000005 68[03000000]                        push nume_fisier
+    31 0000000A FF15[00000000]                      call [fopen]
+    32 00000010 83C408                              add esp, 4*2
+    33 00000013 83F800                              cmp EAX, 0
+    34 00000016 7473                                je sfarsit
+    35 00000018 A3[0D000000]                        mov [descriptor_fisier], EAX
+    36                                              
+    37                                          
+    38                                          citire:  
+    39 0000001D 68[28000000]                        push a
+    40 00000022 68[00000000]                        push format_fscanf
+    41 00000027 FF35[0D000000]                      push dword [descriptor_fisier]
+    42 0000002D FF15[00000000]                      call [fscanf]
+    43 00000033 83C40C                              add esp, 4*3
+    44                                              
+    45 00000036 85C0                                test eax, eax
+    46 00000038 783D                                js afisare
+    47                                              
+    48 0000003A EB20                                jmp verificare_cifra
+    49                                              
+    50                                              
+    51                                              verificare_par:
+    52 0000003C 50                                      push EAX
+    53 0000003D A1[28000000]                            mov EAX, [a]; EAX = a
+    54 00000042 BA00000000                              mov EDX, 0; pentru ca sunt cifre si consideram oricum fara semn
+    55 00000047 BB02000000                              mov EBX, 2
+    56 0000004C F7F3                                    div EBX ; acum edx = restul
+    57 0000004E 83FA00                                  cmp EDX, 0 ; vedem daca restul la impartirea cu 2 e 0 <==> e divizibil cu 2 <==> e par
+    58 00000051 7506                                    jne skip_add_pare
+    59 00000053 FF05[24000000]                          inc dword [nr_cif]
+    60                                                  skip_add_pare:
+    61 00000059 58                                      pop EAX
+    62 0000005A EBC1                                    jmp citire
+    63                                          
+    64                                          
+    65                                          verificare_cifra:
+    66 0000005C 833D[28000000]30                    cmp dword [a], '0'
+    67 00000063 7CB8                                jl citire
+    68 00000065 833D[28000000]39                    cmp dword [a], '9'
+    69 0000006C 7FAF                                jg citire
+    70                                              ; convert to cifra
+    71 0000006E 832D[28000000]30                    sub dword [a], '0'
+    72 00000075 EBC5                                jmp verificare_par
+    73                                          
+    74                                          afisare:
+    75 00000077 FF35[24000000]                      push dword [nr_cif]
+    76 0000007D 68[11000000]                        push format_printf
+    77 00000082 FF15[00000000]                      call [printf]
+    78 00000088 83C408                              add esp, 4*2
+    79                                              
+    80                                              
+    81                                          sfarsit:
+    82                                          
+    83                                              
+    84                                          
+    85                                          ; exit(0)
+    86 0000008B 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    87 0000008D FF15[00000000]                  call    [exit]       ; call exit to terminate the program

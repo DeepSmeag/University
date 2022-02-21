@@ -1,0 +1,117 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                      ; 1,2)Define a,b,c,d as byte
+    15                                      ; a DB 8
+    16                                      ; b DB 29
+    17                                      ; c DB 120
+    18                                      ; d DB 91
+    19                                      ; 3)Define a,b,c,d as word
+    20                                      ; a DW 8
+    21                                      ; b DW 29
+    22                                      ; c DW 120
+    23                                      ; d DW 91
+    24                                      
+    25                                      ; 4)Define a,b,c byte--d word
+    26                                      ; a DB 8
+    27                                      ; b DB 29
+    28                                      ; c DB 120
+    29                                      ; d DW 91
+    30                                      
+    31                                      ; 5) Define a,b,c,d bye -- e,f,g word
+    32 00000000 08                          a DB 8
+    33 00000001 1D                          b DB 29
+    34 00000002 78                          c DB 120
+    35 00000003 5B                          d DB 91
+    36 00000004 0A00                        e DW 10
+    37 00000006 7B00                        f DW 123
+    38 00000008 1300                        g DW 19
+    39                                  ; our code starts here
+    40                                  segment code use32 class=code
+    41                                      start:
+    42                                          ; ...
+    43                                          
+    44                                          ; Exerciții simple
+    45                                          ; 1)3. 128+128
+    46                                          
+    47                                          ; mov AX, 0
+    48                                          ; mov AX, 128
+    49                                          ; add AX, 128
+    50                                          
+    51                                          ; Adunări, scăderi
+    52                                          ; a,b,c,d - byte
+    53                                          ; 2)3. (c+d)-(a+d)+b = 211-99+29 = 141
+    54                                          
+    55                                          ; mov AX, 0
+    56                                          ; mov AX, [c] ; AX = [c]
+    57                                          ; add AX, [d] ; AX = ([c]+[d])
+    58                                          
+    59                                          ; mov BX, 0
+    60                                          ; mov BX, [a] ; BX = [a]
+    61                                          ; add BX, [d] ; BX = ([a]+[d])
+    62                                          ; sub AX, BX ; AX = AX - BX = ([c]+[d]) - ([a]+[d])
+    63                                          ; add AX, [b] ; AX = ([c]+[d]) - ([a]+[d]) + [b]
+    64                                          
+    65                                          
+    66                                          ; a,b,c,d - word
+    67                                          ; 3)3. (b+b+d)-(c+a)
+    68                                          
+    69                                          ; mov EAX, 0
+    70                                          ; mov EAX, [b] ; EAX = [b]
+    71                                          ; add EAX, [b] ; EAX = [b] + [b]
+    72                                          ; add EAX, [d] ; EAX = [b] + [b] + [d]
+    73                                          
+    74                                          ; mov EBX, 0
+    75                                          ; mov EBX, [c] ; EBX = [c]
+    76                                          ; add EBX, [a] ; EBX = [c] + [a]
+    77                                          
+    78                                          ; sub EAX, EBX ; EAX = EAX - EBX = ([b] + [b] + [d]) - ([c] + [a]) = 149 - 128 = 21
+    79                                          
+    80                                          
+    81                                          
+    82                                          ; Înmulțiri, împărțiri
+    83                                          ; a,b,c - byte, d - word
+    84                                          ; 4)3. [-1+d-2*(b+1)]/a
+    85                                          
+    86                                          ; mov EAX, 0
+    87                                          ; mov AL, [b] ; EAX = [b]
+    88                                          ; inc AL ; AL = [b] + 1
+    89                                          ; mov AH, 2 ; AH = 2
+    90                                          ; mul AH ; AX = AL * AH = 2* ([b] + 1)
+    91                                      
+    92                                          ; mov EBX, 0
+    93                                          ; mov BX, [d] ; BX = [d]
+    94                                          ; sub BX, AX ; BX = [d] - 2* ([b] + 1)
+    95                                          ; sub BX, 1 ;  BX = [d] - 2* ([b] + 1) - 1
+    96                                          
+    97                                          ; mov AX, BX ; AX = BX
+    98                                          ; mov BL, [a] ; BL = [a]
+    99                                          ; div BL ; AL = AX // [a] ; AH = AX % [a] ==> AL = 3; AH = 6
+   100                                          
+   101                                          
+   102                                          ; a,b,c,d-byte, e,f,g,h-word
+   103                                          ; 5)3. (e+f)*g
+   104                                          
+   105 00000000 66B80000                        mov AX, 0
+   106 00000004 66A1[04000000]                  mov AX, [e] ; AX = [e]
+   107 0000000A 660305[06000000]                add AX, [f] ; AX = [e] + [f]
+   108 00000011 668B1D[08000000]                mov BX, [g] ; BX = [g]
+   109 00000018 66F7E3                          mul BX ; DX:AX = AX * BX
+   110 0000001B 6652                            push DX
+   111 0000001D 6650                            push AX
+   112                                          
+   113                                          
+   114 0000001F 58                              pop EAX
+   115                                          ; exit(0)
+   116 00000020 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   117 00000022 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

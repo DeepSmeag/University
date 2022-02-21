@@ -1,0 +1,220 @@
+     1                                  bits 32; assembling for the 32 bits architecture 
+     2                                  
+     3                                    
+     4                                  
+     5                                  ; declare the EntryPoint (a label defining the very first instruction of the program) 
+     6                                  
+     7                                  global start         
+     8                                  
+     9                                    
+    10                                  
+    11                                  ; declare external functions needed by our program 
+    12                                  
+    13                                  extern exit, printf, scanf, fprintf, fscanf, fopen, fclose, fwrite,fputc, ftell,fseek, fgetpos, fsetpos; tell nasm that exit exists even if we won't be defining it 
+    14                                  
+    15                                  import exit msvcrt.dll; exit is a function that ends the calling process. It is defined in msvcrt.dll 
+    16                                  
+    17                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions 
+    18                                  
+    19                                  import printf msvcrt.dll 
+    20                                  import fprintf msvcrt.dll
+    21                                  import fscanf msvcrt.dll
+    22                                  import fopen msvcrt.dll
+    23                                  import fclose msvcrt.dll
+    24                                  import scanf msvcrt.dll 
+    25                                  import fwrite msvcrt.dll
+    26                                  import fputc msvcrt.dll
+    27                                  import ftell msvcrt.dll
+    28                                  import fseek msvcrt.dll
+    29                                  import fgetpos msvcrt.dll
+    30                                  import fsetpos msvcrt.dll
+    31                                  ; our data is declared here (the variables needed by our program) 
+    32                                  
+    33                                  segment data use32 class=data 
+    34                                      
+    35 00000000 00                          ok db 0
+    36                                      
+    37 00000001 <res 00000001>              char resb 1
+    38                                      
+    39 00000002 257320256300                format_scanf db "%s %c",0
+    40 00000008 25730A256300                format_printf db "%s",10,"%c",0
+    41                                      
+    42 0000000E 00<rept>                    cuvant times 100 db 0
+    43                                      ; chestii fisiere
+    44 00000072 7200                        mod_acces_r db "r",0
+    45 00000074 7700                        mod_acces_w db "w",0
+    46 00000076 00<rept>                    fr_name times 100 db 0
+    47 000000DA 637576696E74652E74-         fw_name db "cuvinte.txt", 0
+    47 000000E3 787400             
+    48 000000E6 00000000                    descriptor_r dd 0
+    49 000000EA 00000000                    descriptor_w dd 0
+    50                                      
+    51 000000EE 257300                      format_readf db "%s",0
+    52 000000F1 25732000                    format_writef db "%s ",0
+    53                                      
+    54 000000F5 00                          back_string db 0
+    55                                      
+    56 000000F6 257300                      format_back db "%s",0
+    57                                      
+    58 000000F9 00000000                    file_position dd 0
+    59                                  ; our code starts here 
+    60                                  
+    61                                  segment code use32 class=code 
+    62                                  
+    63                                      start: 
+    64                                  
+    65 00000000 68[01000000]                    push dword char
+    66 00000005 68[76000000]                    push dword fr_name
+    67 0000000A 68[02000000]                    push dword format_scanf
+    68 0000000F FF15[00000000]                  call [scanf]
+    69 00000015 83C40C                          add esp, 4*3
+    70                                          
+    71                                          ; am numele de fisier, acum il deschidem
+    72                                          ; fopen(nume_fisier, mod_acces)
+    73 00000018 68[72000000]                    push dword mod_acces_r
+    74 0000001D 68[76000000]                    push dword fr_name
+    75                                          
+    76 00000022 FF15[00000000]                  call [fopen]
+    77 00000028 83C408                          add esp, 4*2
+    78                                          
+    79 0000002B 83F800                          cmp eax, 0
+    80 0000002E 0F84E2000000                    je .final
+    81                                          
+    82 00000034 A3[E6000000]                    mov [descriptor_r], eax
+    83                                          
+    84                                          ; fopen(fis_w, mod_w)
+    85 00000039 68[74000000]                    push dword mod_acces_w
+    86 0000003E 68[DA000000]                    push dword fw_name
+    87 00000043 FF15[00000000]                  call [fopen]
+    88 00000049 83C408                          add esp, 4*2
+    89 0000004C 83F800                          cmp eax,0
+    90 0000004F 0F84B2000000                    je .final_inchid_r
+    91 00000055 A3[EA000000]                    mov [descriptor_w], eax 
+    92                                          
+    93                                          ; avem deschis fisierul, acum citim din el
+    94                                          ; fscanf(descriptor, format, loc in care pun)
+    95                                          .citire_cuv
+    95          ******************       warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+    96                                             
+    97                                              
+    98 0000005A 68[0E000000]                        push dword cuvant
+    99 0000005F 68[EE000000]                        push dword format_readf
+   100 00000064 FF35[E6000000]                      push dword [descriptor_r]
+   101 0000006A FF15[00000000]                      call [fscanf]
+   102 00000070 83C40C                              add esp, 4*3
+   103                                              
+   104 00000073 83F8FF                              cmp eax, -1
+   105 00000076 7432                                je .final_citire
+   106                                              
+   107                                              ; luam caracter cu caracter cuvantul si verificam
+   108 00000078 BE[0E000000]                        mov esi, cuvant
+   109                                              ;mov byte [ok], 0
+   110 0000007D FC                                  cld
+   111                                              .loop_verif_char:
+   112 0000007E AC                                      lodsb
+   113 0000007F 3C00                                    cmp al, 0
+   114 00000081 74D7                                    je .citire_cuv
+   115 00000083 3A05[01000000]                          cmp al, byte [char]
+   116 00000089 75F3                                    jne .loop_verif_char
+   117                                                  
+   118                                                  ;.schimb_ok:
+   119                                                      ;mov byte[ok], 1
+   120                                                     
+   121                                              ;cmp byte [ok], 1
+   122 0000008B EB02                                jmp .write_to_file
+   123                                              .inainte_de_citire_cuv:
+   124 0000008D EBCB                                jmp .citire_cuv
+   125                                              
+   126                                              
+   127                                              .write_to_file:
+   128                                                  ; scriu in fisier aia
+   129                                                  ; fprintf(descriptor, format, ceva din format)
+   130 0000008F 68[0E000000]                            push dword cuvant
+   131 00000094 68[F1000000]                            push dword format_writef
+   132 00000099 FF35[EA000000]                          push dword [descriptor_w]
+   133 0000009F FF15[00000000]                          call [fprintf]
+   134 000000A5 83C40C                                  add esp, 4*3
+   135                                                  
+   136                                                  
+   137 000000A8 EBE3                                    jmp .inainte_de_citire_cuv
+   138                                              
+   139                                              
+   140                                              
+   141                                          
+   142                                          .final_citire:
+   143                                          
+   144                                          
+   145                                          
+   146                                          
+   147                                          
+   148                                          
+   149                                          
+   150                                          ; push dword [descriptor_w]
+   151                                          ; call [ftell]
+   152                                          ; add esp, 4*1
+   153 000000AA 68[F9000000]                    push dword file_position
+   154 000000AF FF35[EA000000]                  push dword [descriptor_w]
+   155 000000B5 FF15[00000000]                  call [fgetpos]
+   156 000000BB 83C408                          add esp, 4*2
+   157                                          
+   158                                          ; sub eax, 5
+   159                                          ; mov dword [file_position], eax
+   160 000000BE A1[F9000000]                    mov eax, [file_position]
+   161 000000C3 83E801                          sub eax, 1
+   162 000000C6 A3[F9000000]                    mov [file_position], eax
+   163                                          
+   164 000000CB 68[F9000000]                    push dword file_position
+   165 000000D0 FF35[EA000000]                  push dword [descriptor_w]
+   166 000000D6 FF15[00000000]                  call [fsetpos]
+   167 000000DC 83C408                          add esp, 4*2
+   168                                          
+   169                                          ; push dword [descriptor_w]
+   170                                          ; push dword 1
+   171                                          ; push dword 1
+   172                                          ; push dword format_back
+   173                                          ; call [fwrite]
+   174                                          ; add esp, 4*4
+   175                                          
+   176                                          ; push dword [file_position]
+   177                                          ; push dword 1
+   178                                          ; push dword [descriptor_w]
+   179                                          ; call [fseek]
+   180                                          ; add esp, 4*3
+   181                                          
+   182 000000DF 68[F5000000]                    push dword back_string
+   183 000000E4 68[F6000000]                    push dword format_back
+   184 000000E9 FF35[EA000000]                  push dword [descriptor_w]
+   185 000000EF FF15[00000000]                  call [fprintf]
+   186 000000F5 83C408                          add esp, 4*2
+   187                                          
+   188                                          ; push dword [descriptor_w]
+   189                                          ; push dword format_back
+   190                                          ; call [fputc]
+   191                                          ; add esp, 4*2
+   192                                          
+   193                                          ;fclose(descriptor_w)
+   194 000000F8 FF35[EA000000]                  push dword [descriptor_w]
+   195 000000FE FF15[00000000]                  call [fclose]
+   196 00000104 83C404                          add esp, 4
+   197                                          
+   198                                          
+   199                                          .final_inchid_r
+   199          ******************       warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+   200                                          
+   201                                          ;fclose(descriptor_r)
+   202 00000107 FF35[E6000000]                  push dword [descriptor_r]
+   203 0000010D FF15[00000000]                  call [fclose]
+   204 00000113 83C404                          add esp, 4
+   205                                          
+   206                                          .final:
+   207                                          
+   208                                          
+   209                                          
+   210                                  
+   211                                          ; exit (0) 
+   212                                  
+   213 00000116 6A00                            push dword 0; push the parameter for exit onto the stack 
+   214                                  
+   215 00000118 FF15[00000000]                  Call [exit]; call exit to terminate the program 
+   216                                  
+   217                                   

@@ -1,0 +1,52 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, scanf, printf              ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import scanf msvcrt.dll
+    11                                  import printf msvcrt.dll
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  segment data use32 class=data
+    14                                      ; ...
+    15 00000000 256400                      format_scanf db "%d", 0
+    16 00000003 256400                      format_printf db "%d", 0
+    17 00000006 00000000                    a dd 0
+    18 0000000A FFFFFF7F                    b dd 7FFFFFFFh
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; ...
+    23                                          ;Se citesc de la tastatura numere (in baza 10) pana cand se introduce cifra 0. Determinaţi şi afişaţi cel mai mic număr dintre cele citite.
+    24                                          ;mov EDX, 7FFFFFFFh; EDX  = maximul pozitiv posibil
+    25                                          loop_citire:
+    26 00000000 68[06000000]                        push a
+    27 00000005 68[00000000]                        push format_scanf
+    28 0000000A FF15[00000000]                      call [scanf]
+    29 00000010 83C404                              add esp, 2*2
+    30                                              ; a a primit valoare
+    31 00000013 833D[06000000]00                    cmp [a], dword 0
+    32 0000001A 7419                                je afisare
+    33 0000001C A1[0A000000]                        mov EAX, [b]
+    34 00000021 3905[06000000]                      cmp [a], EAX
+    35 00000027 7D0A                                jge skip_update_lowest
+    36                                              update_lowest:
+    37 00000029 A1[06000000]                            mov EAX, [a]
+    38 0000002E A3[0A000000]                            mov [b], EAX
+    39                                              skip_update_lowest:
+    40                                              
+    41                                              
+    42 00000033 EBCB                            jmp loop_citire
+    43                                          
+    44                                              
+    45                                          afisare:
+    46 00000035 FF35[0A000000]                      push dword [b]
+    47 0000003B 68[03000000]                        push format_printf
+    48 00000040 FF15[00000000]                      call [printf]
+    49 00000046 83C404                              add esp, 2*2
+    50                                          ; exit(0)
+    51 00000049 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    52 0000004B FF15[00000000]                  call    [exit]       ; call exit to terminate the program

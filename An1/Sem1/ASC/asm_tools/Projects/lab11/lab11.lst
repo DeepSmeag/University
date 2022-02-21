@@ -1,0 +1,62 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf              ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  
+    12                                  ; our data is declared here (the variables needed by our program)
+    13                                  
+    14                                  extern concatenare
+    15                                  
+    16                                  segment data use32 class=data
+    17                                      ; ...
+    18                                      L equ 100
+    19 00000000 616263646531323334-         sir1 db "abcde1234jg",0
+    19 00000009 6A6700             
+    20 0000000C 666B61313239356B66-         sir2 db "fka1295kf12",0
+    20 00000015 313200             
+    21                                  
+    22 00000018 <res 000000C9>              rez1 resb (2*L+1)
+    23 000000E1 <res 000000C9>              rez2 resb (2*L+1)
+    24                                      
+    25 000001AA 25735C6E00                  format_print db "%s\n",0
+    26                                  ; our code starts here
+    27                                  segment code use32 class=code
+    28                                      start:
+    29                                          ; ...
+    30                                          ; 3. Se dau doua siruri continand caractere. Sa se calculeze si sa se afiseze rezultatul concatenarii tuturor caracterelor tip cifra zecimala din cel de-al doilea sir dupa cele din primul sir si invers, rezu
+    31                                          
+    32                                          
+    33                                          ;concatenare 1
+    34 00000000 68[18000000]                    push dword rez1
+    35 00000005 68[0C000000]                    push dword sir2
+    36 0000000A 68[00000000]                    push dword sir1
+    37 0000000F E8(00000000)                    call concatenare
+    38 00000014 83C40C                          add ESP, 4*3
+    39                                          
+    40                                          ;concatenare 2
+    41 00000017 68[E1000000]                    push dword rez2
+    42 0000001C 68[00000000]                    push dword sir1
+    43 00000021 68[0C000000]                    push dword sir2
+    44 00000026 E8(00000000)                    call concatenare
+    45 0000002B 83C40C                          add ESP, 4*3
+    46                                          
+    47                                          ;afisare
+    48 0000002E 68[18000000]                    push rez1
+    49 00000033 68[AA010000]                    push format_print
+    50 00000038 FF15[00000000]                  call [printf]
+    51 0000003E 83C404                          add ESP, 4*1
+    52                                          
+    53 00000041 68[E1000000]                    push rez2
+    54 00000046 68[AA010000]                    push format_print
+    55 0000004B FF15[00000000]                  call [printf]
+    56 00000051 83C404                          add ESP, 4*1
+    57                                          
+    58                                          ; exit(0)
+    59 00000054 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    60 00000056 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
