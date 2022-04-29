@@ -1,0 +1,4 @@
+﻿  Repository.c
+C:\Users\robi_\source\repos\Tema_lab2\Tema_lab2\Repository.c(70,18): warning C4013: 'destroy_Medicine' undefined; assuming extern returning int
+C:\Users\robi_\source\repos\Tema_lab2\Tema_lab2\Repository.c(172,21): warning C4098: 'gll': 'void' function returning a value
+  Tema_lab2.vcxproj -> C:\Users\robi_\source\repos\Tema_lab2\x64\Debug\Tema_lab2.exe
