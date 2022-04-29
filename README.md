@@ -6,3 +6,8 @@ Repo pentru toata facultatea
 - LC
 - ASC
 ### Sem2
+- OOP
+- SDA
+- AG
+- SD
+- OS
