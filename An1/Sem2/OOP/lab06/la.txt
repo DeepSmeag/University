@@ -1,0 +1,4 @@
+cbb,bba,bab,326
+c,b,c,4
+bac,bcc,caa,685
+aba,bab,cab,268

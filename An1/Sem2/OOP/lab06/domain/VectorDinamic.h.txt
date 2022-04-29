@@ -1,0 +1,231 @@
+// #include <stdio.h>
+
+template <class TElem>
+class Iterator;
+
+template <typename TElem>
+class VectorDinamic
+{
+
+private:
+	// capacitate
+	int capacity;
+	// dimensiune
+	int n;
+	// elemente
+	TElem *e;
+	// pentru redimensionare
+	void redim();
+
+public:
+	// pentru ca Iteratorul sa poata accesa reprezentarea vectorului
+	class Iterator
+	{
+	public:
+		Iterator(const VectorDinamic<TElem> &_v);
+		TElem &operator*() const;
+		Iterator &operator++();
+		Iterator operator++(int);
+		bool operator!=(const Iterator &other) const;
+		bool operator<=(const Iterator &other) const;
+		int getCurent();
+		void setCurent(int index);
+
+	private:
+		const VectorDinamic<TElem> &v;
+		int curent;
+	};
+
+	// constructor
+	VectorDinamic();
+	VectorDinamic(const VectorDinamic &other);
+	// destructor
+	~VectorDinamic();
+
+	// dimensiunea vectorului (numar de elemente)
+	int size() const;
+	// daca e gol vectorul
+	bool empty() const;
+
+	// adaugare la sfarsit
+	void push_back(TElem elem);
+
+	TElem &operator[](int index) const;
+	VectorDinamic &operator=(const VectorDinamic &other)
+	{
+		if (this == &other)
+		{
+			return *this; // s-a facut l=l;
+		}
+		delete[] e;
+		e = new TElem[other.capacity];
+		// copiez elementele
+		for (int i = 0; i < other.n; i++)
+		{
+			e[i] = other.e[i];
+		}
+		n = other.n;
+		capacity = other.capacity;
+		std::cout << "cea";
+		return *this;
+	}
+	// returneaza iterator la inceput de vector
+	Iterator begin() const;
+	// returneaza iterator la final de vector
+	Iterator end() const;
+	// sterge elementul care corespunde iteratorului
+	void erase(Iterator &it);
+};
+
+template <typename TElem>
+void VectorDinamic<TElem>::redim()
+{
+
+	// alocam un spatiu de capacitate dubla
+	auto eNou = new TElem[2 * capacity];
+	// TElem *eNou = new int[2 * capacity];
+
+	// copiem vechile valori in noua zona
+	for (int i = 0; i < n; i++)
+		eNou[i] = e[i];
+
+	// dublam capacitatea
+	capacity = 2 * capacity;
+
+	// eliberam vechea zona
+	delete[] e;
+
+	// vectorul indica spre noua zona
+	e = eNou;
+}
+template <typename TElem>
+VectorDinamic<TElem>::VectorDinamic() : capacity{4}, n{0}
+{
+	e = new TElem[capacity];
+}
+
+template <typename TElem>
+VectorDinamic<TElem>::VectorDinamic(const VectorDinamic &other) : capacity{other.capacity}, n{0}
+{
+	e = new TElem[capacity];
+	for (auto it = other.begin(); it != other.end(); it++)
+	{
+		this->push_back(*it);
+	}
+}
+
+template <typename TElem>
+VectorDinamic<TElem>::~VectorDinamic()
+{
+	// eliberam zona de memorare alocata vectorului
+	delete[] e;
+	n = 0;
+	capacity = 0;
+}
+template <typename TElem>
+int VectorDinamic<TElem>::size() const
+{
+	return n;
+}
+
+template <typename TElem>
+TElem &VectorDinamic<TElem>::operator[](int index) const
+{
+
+	return e[index];
+}
+
+template <typename TElem>
+void VectorDinamic<TElem>::push_back(TElem elem)
+{
+	// daca s-a atins capacitatea maxima, redimensionam
+	if (n == capacity)
+		redim();
+
+	// adaugam la sfarsit
+	e[n++] = elem;
+}
+
+template <typename TElem>
+int VectorDinamic<TElem>::Iterator::getCurent()
+{
+	int c = curent;
+	return c;
+}
+template <typename TElem>
+void VectorDinamic<TElem>::Iterator::setCurent(int index)
+{
+	curent = index;
+}
+template <typename TElem>
+void VectorDinamic<TElem>::erase(VectorDinamic<TElem>::Iterator &it)
+{
+	int index = it.getCurent();
+	for (; index < n - 1; index++)
+	{
+		e[index] = e[index + 1];
+	}
+	n--;
+}
+
+template <typename TElem>
+bool VectorDinamic<TElem>::empty() const
+{
+	return n == 0 ? true : false;
+}
+
+template <typename TElem>
+typename VectorDinamic<TElem>::Iterator VectorDinamic<TElem>::begin() const
+{
+	auto it = VectorDinamic<TElem>::Iterator(*this);
+	it.setCurent(0);
+	// return VectorDinamic<TElem>::Iterator{this, 0};
+	return it;
+	// return &e[0];
+}
+template <typename TElem>
+typename VectorDinamic<TElem>::Iterator VectorDinamic<TElem>::end() const
+{
+	auto it = VectorDinamic<TElem>::Iterator(*this);
+	it.setCurent(n);
+	// return VectorDinamic<TElem>::Iterator{this, 0};
+	return it;
+	// return VectorDinamic<TElem>::Iterator{this, n - 1};
+	// return &e[n - 1];
+}
+
+template <typename TElem>
+VectorDinamic<TElem>::Iterator::Iterator(const VectorDinamic<TElem> &_v) : v(_v), curent{0}
+{
+}
+
+template <typename TElem>
+TElem &VectorDinamic<TElem>::Iterator::operator*() const
+{
+	return v.operator[](curent);
+	// return v->e[curent];
+}
+
+template <typename TElem>
+typename VectorDinamic<TElem>::Iterator &VectorDinamic<TElem>::Iterator::operator++()
+{
+	curent++;
+	return *this;
+}
+template <typename TElem>
+typename VectorDinamic<TElem>::Iterator VectorDinamic<TElem>::Iterator::operator++(int)
+{
+	curent++;
+	return *this;
+}
+
+template <typename TElem>
+bool VectorDinamic<TElem>::Iterator::operator!=(const VectorDinamic<TElem>::Iterator &other) const
+{
+	return curent != other.curent;
+}
+template <typename TElem>
+bool VectorDinamic<TElem>::Iterator::operator<=(const VectorDinamic<TElem>::Iterator &other) const
+{
+	return curent <= other.curent;
+}
