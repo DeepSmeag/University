@@ -1,0 +1,1 @@
+grep -E -z --color '\^(.*\s*)*(.*\$)' ~/home/os/training/text.txt

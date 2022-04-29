@@ -1,0 +1,20 @@
+who finger 
+last 
+find sha512sum ps 
+ls expr 
+wc
+du
+if
+test
+chmod
+mv
+grep
+rm
+while
+df
+uniq
+head
+tail
+sort
+
+
