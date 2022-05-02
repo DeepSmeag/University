@@ -1,0 +1,97 @@
+// #include "VectorDinamic.h"
+
+// template <typename TElem>
+// bool VectorDinamic<TElem>::stergereElem(TElem e)
+// {
+// 	Iterator<TElem> i = iterator();
+// 	i.prim();
+// 	int gasit = false;
+// 	while (i.valid() && !gasit)
+// 	{
+// 		if (i.compareCurrentToElement(e) == true)
+// 			gasit = true;
+// 		i.urmator();
+// 	}
+// 	while (i.valid())
+// 	{
+// 		i.shiftToLeft();
+// 		i.urmator();
+// 	}
+// 	if (gasit)
+// 	{
+// 		n--;
+// 	}
+// 	return gasit;
+// }
+
+// template <typename TElem>
+// Iterator<TElem> VectorDinamic<TElem>::iterator()
+// {
+// 	// returnam un iterator pe vector
+// 	return Iterator<TElem>(*this);
+// }
+
+// template <typename TElem>
+// void Iterator<TElem>::prim()
+// {
+// 	// seteaza iteratorul pe prima pozitie din vector
+// 	curent = 0;
+
+// 	// varianta 2
+// 	// curent=v.e; //- pointer spre primul element din vector
+// }
+// template <typename TElem>
+// bool Iterator<TElem>::valid() const
+// {
+// 	// verifica daca iteratorul indica spre un element al vectorului
+// 	return curent < v.dim();
+
+// 	// varianta 2
+// 	// return curent-v.e<v.dim();
+// }
+// template <typename TElem>
+// TElem Iterator<TElem>::element() const
+// {
+// 	// elementul curent
+// 	return v.e[curent];
+
+// 	// varianta 2
+// 	// return *curent;
+// }
+// template <typename TElem>
+// void Iterator<TElem>::urmator()
+// {
+// 	// pentru ambele variante
+// 	curent++;
+// }
+// template <typename TElem>
+// int Iterator<TElem>::index() const
+// {
+// 	return curent;
+// }
+// template <typename TElem>
+// void Iterator<TElem>::shiftToLeft()
+// {
+// 	v.e[curent - 1] = v.e[curent];
+// }
+// template <typename TElem>
+// void Iterator<TElem>::emptyCurrent()
+// {
+// 	v.e[curent] = 0;
+// }
+// template <typename TElem>
+// bool Iterator<TElem>::compareCurrentToElement(TElem elem) const
+// {
+// 	return v.e[curent] == elem ? true : false;
+// }
+// template <typename TElem>
+// void Iterator<TElem>::changeCurrentValue(TElem newValue)
+// {
+// 	v.e[curent] = newValue;
+// }
+
+// template <typename TElem>
+// TElem &Iterator<TElem>::operator->()
+// {
+// 	return v->operator[](curent);
+// }

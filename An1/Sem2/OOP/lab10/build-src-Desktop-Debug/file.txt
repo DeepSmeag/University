@@ -1,0 +1,5 @@
+cb,cb,cb,70
+a,c,a,3
+ba,bc,bb,46
+bb,ca,aa,63
+bc,ca,ac,98
