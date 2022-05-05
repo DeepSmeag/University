@@ -1,5 +1,5 @@
 # Facultate ✔️✍🏻
-Repo pentru toata facultatea
+Repo for College assignments / projects
 ## An1
 ### Sem1
 - FP
