@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/mocs_compilation.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/main.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/main.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/main.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/repo.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/repo.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/repo.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/service.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/service.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/service.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/gui.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/gui.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/gui.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/valid.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/valid.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/valid.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/tests.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/tests.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/tests.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/domain.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/domain.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/examen/domain.cpp"
+}
+]
