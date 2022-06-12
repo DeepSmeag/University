@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/mocs_compilation.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/main.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/main.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/main.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/gui.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/gui.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/gui.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/valid/valid.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/valid/valid.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/valid/valid.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/service/service.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/service/service.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/service/service.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/repo/repo.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/repo/repo.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/repo/repo.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/errors/errors.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/errors/errors.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/errors/errors.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/domain/offer.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/offer.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/offer.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/domain/listOffers.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/listOffers.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/listOffers.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/domain/cart.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/cart.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/cart.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/domain/report.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/report.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/report.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/guiModelView.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/guiModelView.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/guiModelView.cpp"
+}
+]
