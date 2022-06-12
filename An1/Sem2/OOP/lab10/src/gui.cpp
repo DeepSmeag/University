@@ -14,6 +14,9 @@ void guiMain::initGUI()
 
   widForm->setLayout(formLayout);
 
+  QPalette palText;
+  palText.setColor(QPalette::Base, Qt::GlobalColor::yellow);
+  txtName->setPalette(palText);
   QLabel *x = (new QLabel("Name/Criterion:"));
   formLayout->addRow(x, txtName);
 
@@ -26,28 +29,30 @@ void guiMain::initGUI()
   x = (new QLabel("Price:"));
   formLayout->addRow(x, txtPrice);
 
+  x = (new QLabel("Generate no.:"));
+  formLayout->addRow(x, txtGen);
   // butoane de sub form
   // butoane pt introducere txt
   QWidget *formbtn1 = (new QWidget);
   QWidget *formbtn2 = (new QWidget);
-  QHBoxLayout *formbtnLayout1 = (new QHBoxLayout);
-  QHBoxLayout *formbtnLayout2 = (new QHBoxLayout);
+  QHBoxLayout *formbtn1Layout = (new QHBoxLayout);
+  QHBoxLayout *formbtn2Layout = (new QHBoxLayout);
 
-  formbtn1->setLayout(formbtnLayout1);
+  formbtn1->setLayout(formbtn1Layout);
 
-  formbtnLayout1->addWidget(btnAdd);
-  formbtnLayout1->addWidget(btnModify);
-  formbtnLayout1->addWidget(btnFind);
+  formbtn1Layout->addWidget(btnAdd);
+  formbtn1Layout->addWidget(btnModify);
+  formbtn1Layout->addWidget(btnFind);
 
-  formbtn2->setLayout(formbtnLayout2);
+  formbtn2->setLayout(formbtn2Layout);
 
-  formbtnLayout2->addWidget(btnRemove);
-  formbtnLayout2->addWidget(btnUndo);
+  formbtn2Layout->addWidget(btnRemove);
+  formbtn2Layout->addWidget(btnUndo);
 
   formLayout->addRow(formbtn1);
   formLayout->addRow(formbtn2);
 
-  // butoane pentru filtrare
+  // butoane pentru filtrare + generare
   QWidget *formbtnfilter = (new QWidget);
   QHBoxLayout *formbtnfilterLayout = (new QHBoxLayout);
 
@@ -64,12 +69,14 @@ void guiMain::initGUI()
   btnCart->setLayout(btnCartLayout);
 
   btnCartLayout->addWidget(btnOpenCart);
-
+  btnCartLayout->addWidget(btnOpenCartReadOnly);
   formLayout->addRow(btnCart);
   // lista cu date
+
   QWidget *widList = (new QWidget);
   QVBoxLayout *ListLayout = (new QVBoxLayout);
   widList->setLayout(ListLayout);
+
   ListLayout->addWidget(list);
 
   // butoane de sub lista
@@ -81,7 +88,11 @@ void guiMain::initGUI()
   listbtnLayout->addWidget(btnSortBy);
   listbtnLayout->addWidget(btnRefresh);
   ListLayout->addWidget(listbtn);
-
+  QHBoxLayout *cartLayout = new QHBoxLayout;
+  cartLayout->addWidget(btnAddCart);
+  cartLayout->addWidget(btnGenerateCart);
+  cartLayout->addWidget(btnClearCart);
+  ListLayout->addLayout(cartLayout);
   // construire fereastra
   mainly->addWidget(widList);
   mainly->addWidget(widForm);
@@ -113,7 +124,9 @@ void guiMain::connect_signals()
                    &guiMain::refresh);
   QObject::connect(btnGenerate, &QPushButton::clicked, this,
                    &guiMain::generate);
-
+  QObject::connect(btnAddCart, &QPushButton::clicked, this, &guiMain::addCart);
+  QObject::connect(btnClearCart, &QPushButton::clicked, this, &guiMain::clearCart);
+  QObject::connect(btnGenerateCart, &QPushButton::clicked, this, &guiMain::generateCart);
   QObject::connect(list, &QListWidget::itemSelectionChanged, this, [&]()
                    {
     auto selected = list->selectedItems();
@@ -134,12 +147,66 @@ void guiMain::connect_signals()
 
   QObject::connect(btnOpenCart, &QPushButton::clicked, this, [&]()
                    {
-    guiCart *x = (new guiCart{*this});
+    guiCart *x = (new guiCart{service.serviceCartGetAll(), *this});
     // x->setParent(this);
+    setEditable(false, this->txtName);
     btnOpenCart->hide();
+    x->show(); });
+  QObject::connect(btnOpenCartReadOnly, &QPushButton::clicked, this, [&]()
+                   {
+    guiCartReadOnly *x = (new guiCartReadOnly{service.serviceCartGetAll(),*this});
+    // x->setParent(this);
+    setEditable(false, this->txtName);
+    // btnOpenCartReadOnly->hide();
     x->show(); });
 }
 
+void guiMain::addCart()
+{
+  try
+  {
+    auto selected = this->list->selectedItems();
+    if (selected.isEmpty())
+    {
+      QMessageBox::warning(this, "Warning", "Nu este nimic selectat");
+      return;
+    }
+    auto item = selected.at(0);
+
+    std::string name = item->data(Qt::UserRole).toString().toStdString();
+    service.serviceCartAdd(name);
+    cart->notify();
+  }
+  catch (RepoException &ex)
+  {
+    QMessageBox::warning(this, "Warning", QString::fromStdString(ex.what()));
+  }
+  catch (ValidException &ex)
+  {
+    QMessageBox::warning(this, "Warning", QString::fromStdString(ex.what()));
+  }
+}
+
+void guiMain::generateCart()
+{
+  const int genNo = 10;
+  QString val(QString::number(genNo));
+  service.serviceCartGenerate(val.toStdString());
+  // reloadList(service.serviceCartGetAll().getOffers());
+  cart->notify();
+}
+
+void guiMain::clearCart()
+{
+
+  service.serviceCartClear();
+  // reloadList(service.serviceCartGetAll().getOffers());
+  cart->notify();
+}
+void guiMain::setEditable(bool editable, QLineEdit *widget)
+{
+  widget->setReadOnly(!editable);
+}
 void guiMain::addOffer()
 {
   try
@@ -379,16 +446,18 @@ void guiMain::sortBy()
 
 void guiMain::refresh()
 {
+  setEditable(true, this->txtName);
   reloadList(service.serviceGetAll().getOffers());
 }
 void guiMain::generate()
 {
-  service.serviceGenerate("10");
+  service.serviceGenerate(txtGen->text().toStdString());
   reloadList(service.serviceGetAll().getOffers());
 }
 
 void guiMain::reloadList(const std::vector<Offer> &list)
 {
+
   this->list->clear();
   for (const auto &x : list)
   {
@@ -407,12 +476,11 @@ void guiCart::initGUI()
 {
 
   setLayout(mainly);
-
   // lista cu date
   QWidget *widList = (new QWidget);
   QVBoxLayout *ListLayout = (new QVBoxLayout);
   widList->setLayout(ListLayout);
-  ListLayout->addWidget(list);
+  ListLayout->addWidget(table);
 
   // butoane din dreapta
   QWidget *widBtn = (new QWidget);
@@ -433,7 +501,7 @@ void guiCart::initGUI()
 
 void guiCart::connect_signals()
 {
-
+  cart.addObserver(this);
   QObject::connect(btnAdd, &QPushButton::clicked, this,
                    &guiCart::addCart);
 
@@ -445,6 +513,11 @@ void guiCart::connect_signals()
 
   QObject::connect(btnExport, &QPushButton::clicked, this,
                    &guiCart::exportCart);
+  // QObject::connect(mainui.btnAddCart, &QPushButton::clicked, this, &guiCart::addCart);
+  // QObject::connect(mainui.btnClearCart, &QPushButton::clicked, this, [&]()
+  //                  { mainui.service.serviceCartClear(); });
+  // QObject::connect(mainui.btnGenerateCart, &QPushButton::clicked, this, [&]()
+  //                  { mainui.service.serviceCartGenerate(std::to_string(this->spinGenerate->value())); });
 }
 
 void guiCart::addCart()
@@ -463,6 +536,7 @@ void guiCart::addCart()
 
     mainui.service.serviceCartAdd(name);
     reloadList(mainui.service.serviceCartGetAll().getOffers());
+    cart.notify();
   }
   catch (RepoException &ex)
   {
@@ -479,6 +553,7 @@ void guiCart::generateCart()
   QString val(QString::number(spinGenerate->value()));
   mainui.service.serviceCartGenerate(val.toStdString());
   reloadList(mainui.service.serviceCartGetAll().getOffers());
+  cart.notify();
 }
 
 void guiCart::clearCart()
@@ -486,6 +561,7 @@ void guiCart::clearCart()
 
   mainui.service.serviceCartClear();
   reloadList(mainui.service.serviceCartGetAll().getOffers());
+  cart.notify();
 }
 
 void guiCart::exportCart()
@@ -507,18 +583,37 @@ void guiCart::exportCart()
 
 void guiCart::reloadList(const std::vector<Offer> &list)
 {
-  this->list->clear();
-  for (const auto &x : list)
-  {
-    QListWidgetItem *item = (new QListWidgetItem);
+  tableModel->setOffers(list);
+  // this->table->clear();
+  // table->setRowCount((int)(list.size()));
+  // table->setColumnCount(4);
 
-    std::string txt =
-        x.getName() + " | " + x.getDestination() + " | " + x.getType() + " | " + x.getPrice();
+  // QTableWidgetItem *nameCol = new QTableWidgetItem("Name");
+  // QTableWidgetItem *destCol = new QTableWidgetItem("Destination");
+  // QTableWidgetItem *typeCol = new QTableWidgetItem("Type");
+  // QTableWidgetItem *priceCol = new QTableWidgetItem("Price");
+  // table->setHorizontalHeaderItem(0, nameCol);
+  // table->setHorizontalHeaderItem(1, destCol);
+  // table->setHorizontalHeaderItem(2, typeCol);
+  // table->setHorizontalHeaderItem(3, priceCol);
+  // table->setSelectionMode(QAbstractItemView::SingleSelection);
+  // table->setSelectionBehavior(QAbstractItemView::SelectRows);
 
-    item->setText(QString::fromStdString(txt));
-    item->setData(Qt::UserRole, QString::fromStdString(x.getName()));
-    this->list->addItem(item);
-  }
+  // int ind = 0;
+  // for (const auto &x : list)
+  // {
+  //   std::string name = x.getName();
+  //   std::string destination = x.getDestination();
+  //   std::string type = x.getType();
+  //   std::string price = x.getPrice();
+
+  // table->setItem(ind, 0, new QTableWidgetItem(QString::fromStdString(name)));
+  // table->setItem(ind, 1, new QTableWidgetItem(QString::fromStdString(destination)));
+  // table->setItem(ind, 2, new QTableWidgetItem(QString::fromStdString(type)));
+  // table->setItem(ind, 3, new QTableWidgetItem(QString::fromStdString(price)));
+
+  // ind++;
+  // }
 }
 
 void guiCart::closeEvent(QCloseEvent *event)
@@ -526,3 +621,34 @@ void guiCart::closeEvent(QCloseEvent *event)
   mainui.btnOpenCart->show();
   event->accept();
 }
+
+void guiCartReadOnly::initGUI()
+{
+
+  setLayout(mainly);
+
+  // // construiere fereastra
+  // mainly->addWidget(widList);
+  // mainly->addWidget(widBtn);
+}
+
+void guiCartReadOnly::connect_signals()
+{
+  cart.addObserver(this);
+}
+
+// void guiCartReadOnly::reloadList(const std::vector<Offer> &list)
+// {
+//   this->list->clear();
+//   for (const auto &x : list)
+//   {
+//     QListWidgetItem *item = (new QListWidgetItem);
+
+//     std::string txt =
+//         x.getName() + " | " + x.getDestination() + " | " + x.getType() + " | " + x.getPrice();
+
+//     item->setText(QString::fromStdString(txt));
+//     item->setData(Qt::UserRole, QString::fromStdString(x.getName()));
+//     this->list->addItem(item);
+//   }
+// }

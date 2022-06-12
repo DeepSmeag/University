@@ -1,6 +1,6 @@
 #include "listOffers.h"
-
-class Cart : public listOffers
+#include "../observer.h"
+class Cart : public listOffers, public Observable
 {
 private:
     std::vector<Offer> offers;
