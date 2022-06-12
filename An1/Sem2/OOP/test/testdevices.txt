@@ -1,0 +1,10 @@
+tel samsung 2022 rosu 10
+tel samsung 2022 rosu 20
+tel samsung 2022 albastru 30
+tel samsung 2022 rosu 40
+tel samsung 2022 albastru 50
+tel iphone 2022 negru 100
+tel samsung 2022 rosu 60
+tel samsung 2022 galben 80
+tel google 2022 galben 70
+tel nokia 2022 rosu 90
