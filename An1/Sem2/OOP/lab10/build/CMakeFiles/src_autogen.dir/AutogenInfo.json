@@ -1,0 +1,172 @@
+{
+	"BUILD_DIR" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen",
+	"CMAKE_BINARY_DIR" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src",
+	"HEADERS" : 
+	[
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/cart.h",
+			"MU",
+			"ZIYP446TXO/moc_cart.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/listOffers.h",
+			"MU",
+			"ZIYP446TXO/moc_listOffers.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/offer.h",
+			"MU",
+			"ZIYP446TXO/moc_offer.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/report.h",
+			"MU",
+			"ZIYP446TXO/moc_report.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/errors/errors.h",
+			"MU",
+			"THVZPJSPBU/moc_errors.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/gui.h",
+			"MU",
+			"EWIEGA46WW/moc_gui.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/guiModelView.h",
+			"MU",
+			"EWIEGA46WW/moc_guiModelView.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/main.h",
+			"MU",
+			"EWIEGA46WW/moc_main.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/repo/repo.h",
+			"MU",
+			"4ZNC3GAF6V/moc_repo.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/service/service.h",
+			"MU",
+			"EZIERFRHL2/moc_service.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/service/undo.h",
+			"MU",
+			"EZIERFRHL2/moc_undo.cpp"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/valid/valid.h",
+			"MU",
+			"77EQ7ZS2NE/moc_valid.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/include",
+	"MOC_COMPILATION_FILE" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build",
+		"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/local/include",
+		"/usr/lib/llvm-10/lib/clang/10.0.0/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/clang++-10",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/src_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 2,
+	"PARSE_CACHE_FILE" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/CMakeFiles/src_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/build/CMakeFiles/src_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/cart.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/listOffers.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/offer.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/domain/report.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/errors/errors.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/gui.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/guiModelView.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/main.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/repo/repo.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/service/service.cpp",
+			"MU"
+		],
+		[
+			"/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/lab10/src/valid/valid.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
