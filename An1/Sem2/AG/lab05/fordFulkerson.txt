@@ -1,0 +1,96 @@
+int graph[1000][1000];
+// returneaza true daca gasim cale pana la nodul final, fals daca nu
+bool bfs(int s, int t, int parent[], int V)
+{
+
+    bool visited[V];
+    memset(visited, 0, sizeof(visited));
+
+    queue<int> q;
+    q.push(s);
+    visited[s] = true;
+    parent[s] = -1;
+
+    while (!q.empty())
+    {
+        int u = q.front();
+        q.pop();
+
+        for (int v = 0; v < V; v++)
+        {
+            if (visited[v] == false && graph[u][v] > 0)
+            {
+                // vrem calea doar pana la nodul final deci ne putem opri odata ce gasim
+                if (v == t)
+                {
+                    parent[v] = u;
+                    return true;
+                }
+                q.push(v);
+                parent[v] = u;
+                visited[v] = true;
+            }
+        }
+    }
+
+    // daca nu ajungem la nodul final returnam fals ca sa stim ca nu mai gasim alte cai (practic tot flow-ul rezidual pana la nodul final a fost epuizat deci ne putem opri)
+    return false;
+}
+
+// max flow de la sursa la nod final
+void fordFulkerson()
+{
+    ifstream f("in.txt");
+    ofstream g("out.txt");
+    int u, v;
+    int V, E;
+    f >> V >> E;
+    int s = 0, t = V - 1;
+
+    // graful rezidual
+    // trebuie sa umplem capacitatile din graful initial(il modificam direct ca graf rezidual)
+
+    // graf[i][j] reprezinta capacitatea ramasa pe acea legatura, sau 0 daca nu mai exista legatura (nu a existat sau s-a epuizat)
+
+    for (int i = 0; i < E; i++)
+    {
+        int x, y, w;
+        f >> x >> y >> w;
+        graph[x][y] = w;
+    }
+
+    int parent[V]; // This array is filled by BFS and to
+                   // store path
+    for (int i = 0; i < V; i++)
+    {
+        parent[i] = -1;
+    }
+
+    int max_flow = 0; // There is no flow initially
+
+    // cat timp avem drum de la sursa la final, aplicam algoritmul
+    while (bfs(s, t, parent, V))
+    {
+        // din parinte in parinte, lasam sa curga maximul posibil
+        int path_flow = INT_MAX;
+        for (v = t; v != s; v = parent[v])
+        {
+            u = parent[v];
+            path_flow = min(path_flow, graph[u][v]);
+        }
+
+        // update la capacitatile reziduale
+        for (v = t; v != s; v = parent[v])
+        {
+            u = parent[v];
+            graph[u][v] -= path_flow;
+            graph[v][u] += path_flow;
+        }
+
+        // adaugam la max flow
+        max_flow += path_flow;
+    }
+
+    // return max flow
+    g << max_flow;
+}
