@@ -1,0 +1,4 @@
+/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/CMakeFiles/edit_cache.dir
+/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/CMakeFiles/src.dir
+/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/CMakeFiles/src_autogen.dir

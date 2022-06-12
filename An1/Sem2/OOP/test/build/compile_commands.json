@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/mocs_compilation.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/main.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/main.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/main.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/repo.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/repo.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/repo.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/service.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/service.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/service.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/gui.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/gui.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/gui.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/tests.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/tests.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/tests.cpp"
+},
+{
+  "directory": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build",
+  "command": "/usr/bin/clang++-10  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test -I/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/build/src_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++  -g   -fPIC -std=gnu++17 -o CMakeFiles/src.dir/domain.cpp.o -c /mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/domain.cpp",
+  "file": "/mnt/e/CodingAndDev/Projects/cC++/Facultate/OOP/test/domain.cpp"
+}
+]

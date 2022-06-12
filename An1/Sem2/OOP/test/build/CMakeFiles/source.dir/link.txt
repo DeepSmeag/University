@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsource.a  CMakeFiles/source.dir/source_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libsource.a
