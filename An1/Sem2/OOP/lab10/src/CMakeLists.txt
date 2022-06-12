@@ -43,7 +43,6 @@ else()
     valid/valid.h
     service/service.cpp
     service/service.h
-    service/undo.cpp
     service/undo.h
     repo/repo.cpp
     repo/repo.h
@@ -57,6 +56,8 @@ else()
     domain/cart.h
     domain/report.cpp
     domain/report.h
+    guiModelView.h
+    guiModelView.cpp
   )
 endif()
 

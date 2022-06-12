@@ -51,6 +51,7 @@ public:
 
     bool operator==(const Offer &rhs) const;
     Offer &operator=(const Offer &other);
+
     /**
      * @brief Print the object in a nice format: Name - Destination - Type - Price
      *
