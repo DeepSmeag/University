@@ -1,0 +1,15 @@
+socialnetwork
+socialnetwork.config
+socialnetwork.domain
+socialnetwork.domain.Entities
+socialnetwork.domain.exceptions
+socialnetwork.domain.utils
+socialnetwork.domain.validators
+socialnetwork.models.Creators
+socialnetwork.repository
+socialnetwork.repository.file
+socialnetwork.repository.memory
+socialnetwork.service
+socialnetwork.service.friendships
+socialnetwork.service.users
+socialnetwork.ui

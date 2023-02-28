@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="testTable" prefHeight="301.0" prefWidth="309.0">
+        <columns>
+            <TableColumn fx:id="tableColId" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="tableCol1" prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="tableCol2" prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboBox" layoutX="116.0" layoutY="383.0" prefWidth="150.0" />
+      <DatePicker fx:id="datePicker" layoutX="372.0" layoutY="68.0" />
+      <Spinner fx:id="spinnerElem" layoutX="385.0" layoutY="260.0" />
+   </children>
+</AnchorPane>
