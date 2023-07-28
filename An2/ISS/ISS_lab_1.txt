@@ -1,0 +1,41 @@
+pt lab 2 la ISS trb sa venim cu diagrama mare in StarUML sau ce o fi
+
+In care sa identificam toate sistemele care fac parte din proiect
+
+- identificam substantivele din text ( ne intrebam ce entitate poate fi)
+- toate substantivele sunt candidati pentru a deveni actori
+- toate verbele sunt candidati pentru a deveni caz de utilizare
+- 
+
+
+Prima etapa din realizarea unui proiect software:
+- colectare a cerintelor : tot ce facem este sa identificam ce vrea clientul
+
+Cerinta este ce vrea clientul (e a clientului)
+Functionalitatea este ce contine sistemul ( a aplicatiei)
+Activitatea e ce realizeaza firma de soft ( a firmei)
+
+
+Identificam cerintele (adica ce vrea clientul, nu ce crede ,nu ce spune, ci ce isi doreste)
+
+Noi vrem sa identificam cu lab 2 ce vrea clientul, nimic pe langa
+
+(in tema lab) 6-7 etape, orice eroare identificata in prima etapa va costa mai mult sa fie rezolvata mai tarziu
+
+Nu realizam aplicatii perfecte, identificam exact ce se cere
+
+
+Folosim SAO - subiect actiune obiect - cand descriem cazurile de utilizare
+Se bazeaza pe dialog:
+ex Bibliotecara da click pe butonul "Adauga carte"
+   Sistemul (putem da alias) afiseaza fereastra de adaugare carte
+
+Deci actiune - reactiune, interactiune - raspuns
+
+Intotdeauna ( f putine exceptii) dialogul e initiat de actor
+Loginul e de obicei inclus in cazul de utilizare: incepem cu "actorul(cine o fi) da dublu click pe iconita de pe desktop / acceseaza site-ul ...." etc
+
+Sfat general:
+Nu fi nesimtit fata de Project Manager
+Poti crede ca ai un proiect mai bun decat PM-ul, dar adesea sunt lucruri pe care nu le stii acolo; nu faci urat, dai sugestii 
+si discuti ideea sa vezi daca nu cumva iti lipseste o idee

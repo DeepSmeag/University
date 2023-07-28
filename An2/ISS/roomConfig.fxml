@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="281.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room configuration">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="82.0" layoutY="87.0" prefHeight="200.0" prefWidth="576.0" style="-fx-background-color: red;" />
+      <Button layoutX="30.0" layoutY="446.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="82.0" text="Go back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="465.0" layoutY="376.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="126.0" text="Reserve">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
