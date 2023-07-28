@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<database>
+  <tableMaster name="Admins">
+    <column name="id" type="int" />
+    <column name="name" type="nvarchar" />
+    <column name="email" type="nvarchar" />
+    <column name="since" type="datetime"/>
+  </tableMaster>
+  <tableDetail name="StockOrders">
+    <column name="id" type="int" />
+    <column name="dateCreated" type="datetime" />
+    <column name="adminId" type="int" />
+    <column name="itemCode" type="nvarchar"/>
+    <column name="quantity" type="int" />
+  </tableDetail>
+  <tableMasterPrimary name="id"/>
+  <tableDetailForeign name="adminId"/>
+</database>
+
+

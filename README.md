@@ -27,3 +27,11 @@ Repo for College assignments / projects
 - RC
 - MAP
 - PLF
+
+### Sem2
+
+- SGBD
+- AI
+- PW
+- MPP
+- ISS
