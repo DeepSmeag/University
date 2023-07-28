@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema 5</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="tree-view-container"></div>
+</body>
+</html>
+<script>
+$(document).ready(function() {
+    // Define the root directory to load
+    var rootDirectory = "";
+
+    // Load the initial tree view
+    loadTreeView(rootDirectory, $('#tree-view-container'));
+
+    // Function to load the tree view for a given directory
+    function loadTreeView(directory, container) {
+        // AJAX call to get the directory contents
+        $.ajax({
+            url: "get_directory_contents.php",
+            data: {directory: directory},
+            dataType: "json",
+            success: function(data) {
+                // Create a new <ul> element for this directory
+                var directoryList = $("<ul>");
+
+                // Loop through each item in the directory
+                $.each(data, function(index, item) {
+                    // Create a new <li> element for this item
+                    var listItem = $("<li>");
+
+                    // Add the item name to the <li> element
+                    listItem.html(item.name);
+
+                    // If this item is a directory, create a nested list and load its contents
+                    if (item.type == "directory") {
+                        var nestedList = $("<ul>");
+                        listItem.append(nestedList);
+                        loadTreeView(directory + item.name + "/", nestedList);
+                    }
+                    // If this item is a file, add a class for styling
+                    else if (item.type == "file") {
+                        listItem.addClass("file");
+                        listItem.click(function() {
+                            displayFileContent(directory + item.name);
+                        });
+                    }
+
+                    // Append the <li> element to the <ul> element
+                    container.append(listItem);
+                });
+            },
+            error: function() {
+                alert("Error loading directory contents.");
+            }
+        });
+    }
+    // Function to display the content of a file
+  function displayFileContent(file) {
+    // AJAX call to get the file content
+    $.ajax({
+      url: "get_file_content.php",
+      data: {file: file},
+      dataType: "text",
+      success: function(data) {
+        // Display the file content in a new <div> element
+        var fileContent = $("<div>").text(data);
+        $("#tree-view-container").html(fileContent);
+      },
+      error: function() {
+        alert("Error loading file content.");
+      }
+    });
+  }
+});
+</script>

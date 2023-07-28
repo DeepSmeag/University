@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    margin: 20px;
+    border: 2px solid black;
+    width: 500px;
+    background-color: yellow;
+}
+
+img {
+    width: 200px;
+    float: left;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+p {
+    margin-left: 20px;
+}

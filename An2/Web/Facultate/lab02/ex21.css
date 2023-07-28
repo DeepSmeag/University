@@ -1,0 +1,48 @@
+html * {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    background: red;
+    height: 100px;
+    width: 100%;
+
+
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    background: yellow;
+    width: 100%;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+}
+
+.menu ul li {
+    flex: 1;
+    border-style: none solid none none;
+    margin: 0px 0px 0px 10px;
+}
+
+.main {
+    height: 700px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    height: 100px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+}

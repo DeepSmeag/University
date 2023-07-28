@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Problema 2</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+	<div id="records-container"></div>
+    <button id="previous-button" disabled>Previous</button>
+    <button id="next-button" disabled>Next</button>
+
+	<script type="text/javascript">
+$(document).ready(function() {
+  var position = 0; // Starting position of records
+  var numRecords = 0; // Total number of records
+  var recordsPerPage = 3; // Number of records to display per page
+  
+  // Disable the Previous button when the page loads
+  $("#previous-button").prop("disabled", true);
+  
+  // Load the first set of records on page load
+  loadRecords(position);
+  
+  // Function to load records from the server
+  function loadRecords(start) {
+    $.ajax({
+      url: "data2.php", // Path to your PHP script
+      method: "POST",
+      data: {position: start},
+      dataType: "json",
+      success: function(data) {
+        // Update the position and total record count
+        position = start;
+        numRecords = data.length;
+        
+        // Clear the records container
+        $("#records-container").empty();
+        
+        // Add the new records to the container
+        for (var i = 0; i < data.length; i++) {
+          var record = data[i];
+          var html = "<div><strong>" + record.Nume + " " + record.Prenume + "</strong><br>" + 
+                     "Telefon: " + record.Telefon + "<br>" +
+                     "Email: " + record.Email + "</div>";
+          $("#records-container").append(html);
+        }
+        
+        // Enable/disable the Next and Previous buttons as needed
+        if (position == 0) {
+          $("#previous-button").prop("disabled", true);
+        } else {
+          $("#previous-button").prop("disabled", false);
+        }
+        if (recordsPerPage == numRecords) {
+          $("#next-button").prop("disabled", false);
+        } else {
+          $("#next-button").prop("disabled", true);
+        }
+      },
+      error: function(xhr, textStatus, errorThrown) {
+        console.log("Error loading records: " + errorThrown);
+      }
+    });
+  }
+  
+  // Handler for the Next button
+  $("#next-button").click(function() {
+    if (recordsPerPage == numRecords) {
+      position += recordsPerPage;
+      loadRecords(position);
+    }
+  });
+  
+  // Handler for the Previous button
+  $("#previous-button").click(function() {
+    if (position - recordsPerPage >= 0) {
+      position -= recordsPerPage;
+      loadRecords(position);
+    }
+  });
+});
+</script>
+</body>
+</html>

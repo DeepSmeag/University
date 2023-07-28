@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Problema 3</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>Database Table Editor</h1>
+    <label for="key-list">Select a key:</label>
+    <select id="key-list">
+      <!-- populate the list of keys dynamically with AJAX -->
+    </select>
+    <form id="data-form">
+      <h2>Key: <span id="selected-key"></span></h2>
+      <label for="attribute1">Attribute 1:</label>
+      <input type="text" id="attribute1" name="attribute1" required><br>
+      <label for="attribute2">Attribute 2:</label>
+      <input type="text" id="attribute2" name="attribute2" required><br>
+      <label for="attribute3">Attribute 3:</label>
+      <input type="text" id="attribute3" name="attribute3" required><br>
+      <button type="submit" id="save-button" disabled>Save</button>
+    </form>
+  </body>
+</html>
+<script>
+   $(document).ready(function() {
+  // get the list of keys from the server
+  $.ajax({
+    url: 'get_keys.php',
+    method: 'GET',
+    dataType: 'json',
+    success: function(keys) {
+      // populate the key list with the retrieved keys
+      var keyList = $('#key-list');
+      $.each(keys, function(index, key) {
+        keyList.append($('<option>').val(key).text(key));
+      });
+      // trigger the change event to display the first key in the list
+      keyList.trigger('change');
+    },
+    error: function(xhr, status, error) {
+      console.error(xhr.responseText);
+    }
+  });
+
+  // update the form when a new key is selected
+  $('#key-list').change(function() {
+    if ($('#save-button').prop('disabled') === false) {
+      var confirmMessage = 'You have unsaved changes. Are you sure you want to leave?';
+      if (!confirm(confirmMessage)) {
+        // if the user cancels the action, select the previously selected key
+        $(this).val($(this).data('prevKey')).change();
+        return;
+      }
+    }
+    var selectedKey = $(this).val();
+    $('#selected-key').text(selectedKey);
+    // retrieve the attributes associated with the selected key
+    $.ajax({
+      url: 'get_data.php',
+      method: 'GET',
+      data: { key: selectedKey },
+      dataType: 'json',
+      success: function(data) {
+        // populate the form with the retrieved data
+        $('#attribute1').val(data.attribute1);
+        $('#attribute2').val(data.attribute2);
+        $('#attribute3').val(data.attribute3);
+        $('#save-button').prop('disabled', true);
+      },
+      error: function(xhr, status, error) {
+        console.error(xhr.responseText);
+      }
+    });
+  });
+
+  // enable the save button when any input value changes
+  $('#data-form input').on('input', function() {
+    $('#save-button').prop('disabled', false);
+  });
+
+  // save the modified data when the save button is clicked
+  $('#data-form').submit(function(event) {
+    event.preventDefault();
+    // get the values of the modified attributes
+    var attribute1 = $('#attribute1').val();
+    var attribute2 = $('#attribute2').val();
+    var attribute3 = $('#attribute3').val();
+    // send the modified data to the server for saving
+    $.ajax({
+      url: 'save_data.php',
+      method: 'POST',
+      data: {
+        key: $('#key-list').val(),
+        attribute1: attribute1,
+        attribute2: attribute2,
+        attribute3: attribute3
+      },
+      dataType: 'json',
+      success: function(result) {
+        // show a message to indicate that the data has been saved
+        alert(result.message);
+        // disable the save button again
+        $('#save-button').prop('disabled', true);
+      },
+      error: function(xhr, status, error) {
+        console.error(xhr.responseText);
+      }
+    });
+  });
+
+  // warn the user if the data has been modified and not saved yet
+  $(window).bind('beforeunload', function() {
+    if ($('#save-button').prop('disabled') === false) {
+      return 'You have unsaved changes. Are you sure you want to leave?';
+    }
+  });
+});
+
+</script>

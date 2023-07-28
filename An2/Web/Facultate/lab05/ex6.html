@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema 6</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#filter_btn").click(function(){
+				var column = $("#column").val();
+				var filter = $("#filter").val();
+
+				$.ajax({
+					url: "filter.php",
+					method: "POST",
+					data: {column:column, filter:filter},
+					success: function(data){
+						$("#product_list").html(data);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Online IT Store</h1>
+	<label for="column">Select a column:</label>
+	<select id="column">
+		<option value="manufacturer">Manufacturer</option>
+		<option value="processor">Processor</option>
+		<option value="memory">Memory</option>
+		<option value="capacity">Capacity</option>
+		<option value="gpu">Graphics card</option>
+	</select>
+	<br>
+	<label for="filter">Filter:</label>
+	<input type="text" id="filter">
+	<button id="filter_btn">Filter</button>
+	<br>
+	<div id="product_list">
+		<!-- product list will be loaded here -->
+	</div>
+</body>
+</html>

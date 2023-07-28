@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Problema 4</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: auto;
+		}
+		td {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			text-align: center;
+			font-size: 50px;
+			cursor: pointer;
+		}
+		td:hover {
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td id="0"></td>
+			<td id="1"></td>
+			<td id="2"></td>
+		</tr>
+		<tr>
+			<td id="3"></td>
+			<td id="4"></td>
+			<td id="5"></td>
+		</tr>
+		<tr>
+			<td id="6"></td>
+			<td id="7"></td>
+			<td id="8"></td>
+		</tr>
+	</table>
+</body>
+</html>
+<script>
+	$(document).ready(function() {
+		// Initialize the game variables
+		var player = "";
+		var computer = "";
+		var gameover = false;
+		var board = ["", "", "", "", "", "", "", "", ""];
+
+		// Function to display a message and end the game
+		function endGame(message) {
+			alert(message);
+			gameover = true;
+		}
+
+		// Function to check if a player has won the game
+		function checkWin(player) {
+			if (
+				(board[0] == player && board[1] == player && board[2] == player) ||
+				(board[3] == player && board[4] == player && board[5] == player) ||
+				(board[6] == player && board[7] == player && board[8] == player) ||
+				(board[0] == player && board[3] == player && board[6] == player) ||
+				(board[1] == player && board[4] == player && board[7] == player) ||
+				(board[2] == player && board[5] == player && board[8] == player) ||
+				(board[0] == player && board[4] == player && board[8] == player) ||
+				(board[2] == player && board[4] == player && board[6] == player)
+			) {
+				endGame(player + " wins!");
+			}
+            if (board[0] != "" && board[1] != "" && board[2] != "" && board[3] != "" && board[4] != "" && board[5] != "" && board[6] != "" && board[7] != "" && board[8] != "") {
+                endGame("Draw!");
+            }
+		}
+
+		// Function to make the computer's move
+		function computerMove() {
+			$.ajax({
+				url: "make_move.php",
+				method: "POST",
+				data: { board: board, player: computer },
+				success: function(response) {
+					if (response == "invalid") {
+						alert("Invalid move. Please try again.");
+					} else {
+						var move = parseInt(response);
+						board[move] = computer;
+                        //alert(move);
+						$("#" + move).text(computer);
+						checkWin(computer);
+					}
+				}
+			});
+		}
+
+		// Function to handle the player's move
+		$("td").click(function() {
+			if (!gameover && $(this).text() == "") {
+				var cell = $(this).attr("id");
+				board[cell] = player;
+				$(this).text(player);
+				checkWin(player);
+				if (!gameover) {
+					computerMove();
+				}
+			}
+		});
+
+		// Randomly decide who goes first
+		if (Math.random() < 0.5) {
+            alert("You start");
+			player = "X";
+			computer = "0";
+			$("#turn").text("Your turn (X)");
+		} else {
+            alert("Computer starts");
+			player = "0";
+			computer = "X";
+			computerMove();
+		}
+	});
+</script>

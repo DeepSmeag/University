@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cautare trenuri</title>
+  <style>
+    /* Stilizare pentru aspectul paginii */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    #results {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cautare trenuri</h1>
+
+  <form method="post" action="p1.php">
+    <label for="origin">Localitate plecare:</label>
+    <input type="text" name="origin" id="origin" required>
+
+    <label for="destination">Localitate sosire:</label>
+    <input type="text" name="destination" id="destination" required>
+
+    <label for="direct_only">
+      <input type="checkbox" name="direct_only" id="direct_only">
+      Doar curse directe
+    </label>
+
+    <button type="submit">Cauta trenuri</button>
+  </form>
+
+  <div id="results">
+    <!-- Aici vor fi afișate rezultatele căutării -->
+  </div>
+</body>
+</html>

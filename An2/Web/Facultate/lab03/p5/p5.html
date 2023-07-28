@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sliding Puzzle</title>
+    <style>
+        #puzzle-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            border: 1px solid black;
+        }
+
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="puzzle-container">
+        <!-- <div class="cell">1</div>
+        <div class="cell">2</div>
+        <div class="cell">3</div>
+        <div class="cell">4</div>
+        <div class="cell">5</div>
+        <div class="cell">6</div>
+        <div class="cell">7</div>
+        <div class="cell">8</div>
+        <div class="cell"></div> -->
+    </div>
+    <div id="message"></div>
+    <script>
+        // Define the size of the puzzle grid
+        const gridSize = 3;
+
+        // Define the game state
+        let puzzle = createPuzzle(gridSize);
+        let emptyCellRow = gridSize - 1;
+        let emptyCellCol = gridSize - 1;
+        shufflePuzzle();
+        document.addEventListener('keydown', handleKeyDown);
+        // Create the puzzle grid and add it to the web page
+        for (let i = 0; i < gridSize; i++) {
+            for (let j = 0; j < gridSize; j++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.textContent = puzzle[i][j];
+                cell.dataset.row = i;
+                cell.dataset.col = j;
+                cell.addEventListener('click', handleCellClick);
+                document.getElementById('puzzle-container').appendChild(cell);
+            }
+        }
+        function handleKeyDown(event) {
+            switch (event.keyCode) {
+                case 37: // left arrow
+                    if (canMove(emptyCellRow, emptyCellCol - 1)) {
+                        movePiece(emptyCellRow, emptyCellCol - 1);
+                        updatePuzzleGrid();
+                    }
+                    break;
+                case 38: // up arrow
+                    if (canMove(emptyCellRow - 1, emptyCellCol)) {
+                        movePiece(emptyCellRow - 1, emptyCellCol);
+                        updatePuzzleGrid();
+                    }
+                    break;
+                case 39: // right arrow
+                    if (canMove(emptyCellRow, emptyCellCol + 1)) {
+                        movePiece(emptyCellRow, emptyCellCol + 1);
+                        updatePuzzleGrid();
+                    }
+                    break;
+                case 40: // down arrow
+                    if (canMove(emptyCellRow + 1, emptyCellCol)) {
+                        movePiece(emptyCellRow + 1, emptyCellCol);
+                        updatePuzzleGrid();
+                    }
+                    break;
+            }
+
+            if (isSolved()) {
+                showMessage('Congratulations, you solved the puzzle!');
+            }
+        }
+        // Function to create the initial puzzle state
+        function createPuzzle(size) {
+            const puzzle = [];
+            let count = 1;
+
+            for (let i = 0; i < size; i++) {
+                const row = [];
+                for (let j = 0; j < size; j++) {
+                    if (count === size * size) {
+                        row.push(null); // use null to represent the empty space
+                    } else {
+                        row.push(count);
+                    }
+                    count++;
+                }
+                puzzle.push(row);
+            }
+
+            return puzzle;
+        }
+
+        // Function to handle clicks on puzzle cells
+        function handleCellClick(event) {
+            const cell = event.target;
+            const row = parseInt(cell.dataset.row);
+            const col = parseInt(cell.dataset.col);
+
+            if (canMove(row, col)) {
+                movePiece(row, col);
+                updatePuzzleGrid();
+                if (isSolved()) {
+                    showMessage('Congratulations, you solved the puzzle!');
+                }
+            }
+        }
+
+        // Function to check if a puzzle piece can be moved
+        function canMove(row, col) {
+            return (row === emptyCellRow && Math.abs(col - emptyCellCol) === 1) ||
+                (col === emptyCellCol && Math.abs(row - emptyCellRow) === 1);
+        }
+
+        // Function to move a puzzle piece
+        function movePiece(row, col) {
+            puzzle[emptyCellRow][emptyCellCol] = puzzle[row][col];
+            puzzle[row][col] = null;
+            emptyCellRow = row;
+            emptyCellCol = col;
+        }
+
+        // Function to check if the puzzle is solved
+        function isSolved() {
+            let count = 1;
+
+            for (let i = 0; i < gridSize; i++) {
+                for (let j = 0; j < gridSize; j++) {
+                    if (i === gridSize - 1 && j === gridSize - 1) {
+                        // the last cell should be null
+                        if (puzzle[i][j] !== null) {
+                            return false;
+                        }
+                    } else {
+                        // the other cells should be numbered correctly
+                        if (puzzle[i][j] !== count) {
+                            return false;
+                        }
+                        count++;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        // Function to update the puzzle grid
+        function updatePuzzleGrid() {
+            const cells = document.querySelectorAll('.cell');
+
+            cells.forEach(cell => {
+                const row = parseInt(cell.dataset.row);
+                const col = parseInt(cell.dataset.col);
+                cell.textContent = puzzle[row][col];
+            });
+        }
+
+        // Function to show a message to the user
+        function showMessage(text) {
+            document.getElementById('message').textContent = text;
+        }
+        // Function to shuffle the puzzle pieces
+        function shufflePuzzle() {
+            for (let i = 0; i < 100; i++) {
+                const neighbors = [];
+                if (emptyCellRow > 0) {
+                    neighbors.push([emptyCellRow - 1, emptyCellCol]); // top neighbor
+                }
+                if (emptyCellRow < gridSize - 1) {
+                    neighbors.push([emptyCellRow + 1, emptyCellCol]); // bottom neighbor
+                }
+                if (emptyCellCol > 0) {
+                    neighbors.push([emptyCellRow, emptyCellCol - 1]); // left neighbor
+                }
+                if (emptyCellCol < gridSize - 1) {
+                    neighbors.push([emptyCellRow, emptyCellCol + 1]); // right neighbor
+                }
+                const randomNeighbor = neighbors[Math.floor(Math.random() * neighbors.length)];
+                const row = randomNeighbor[0];
+                const col = randomNeighbor[1];
+                movePiece(row, col);
+            }
+            updatePuzzleGrid();
+        }
+    </script>
+</body>
+
+</html>

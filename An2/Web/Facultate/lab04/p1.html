@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>P1</title>
+	<style>
+		select {
+			width: 150px;
+			height: 200px;
+			margin-right: 10px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<select id="lista1" multiple>
+		<option value="1">Element 1</option>
+		<option value="2">Element 2</option>
+		<option value="3">Element 3</option>
+		<option value="4">Element 4</option>
+		<option value="5">Element 5</option>
+	</select>
+	<select id="lista2" multiple>
+	</select>
+	<script>
+		$(document).ready(function() {
+			$('#lista1').on('dblclick', 'option', function() {
+				$(this).remove().appendTo('#lista2');
+			});
+
+			$('#lista2').on('dblclick', 'option', function() {
+				$(this).remove().appendTo('#lista1');
+			});
+		});
+	</script>
+</body>
+</html>

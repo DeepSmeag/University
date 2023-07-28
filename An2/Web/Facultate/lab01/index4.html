@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 Form</title>
+</head>
+
+
+
+<body>
+    <div
+        style="height: 1000px;width: 100%; background: #feb1b1; display:flex;flex-direction: column;align-items: center;">
+        <!-- HTML form -->
+        <h1>Suplimente alimentare</h1>
+        <a href="www.google.com">Link</a>
+        <img src="https://s2.googleusercontent.com/s2/favicons?domain=google.com&#38;sz=32" alt="Google Icon">
+        <form action="#" method="GET" name="formi" id="formu">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td colspan="3">Date personale</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <label for="nume">Nume:</label>
+                                    <input type="text" name="nume" id="nume">
+                                </td>
+                                <td>
+                                    <label for="prenume">Prenume:</label>
+                                    <input type="text" name="prenume" id="prenume">
+                                </td>
+                                <td>
+                                    <label for="nastere">Data Nastere:</label>
+                                    <input type="text" name="nastere" id="nastere">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="adresa">Adresa:</label>
+                                    <input type="text" name="adresa" id="adresa">
+                                </td>
+                                <td>
+                                    <label for="telefon">Telefon</label>
+                                    <input type="text" name="telefon" id="telefon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="oras">Oras</label>
+                                    <select name="oras" id="oras">
+                                        <option value="1">Cluj-Napoca</option>
+                                        <option value="2">Bucuresti</option>
+                                        <option value="3">Iasi</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    Județ
+                                    <input type="radio" name="judet" id="judet1">CJ
+                                    <input type="radio" name="judet" id="judet2">B
+                                    <input type="radio" name="judet" id="judet3">IS
+                                </td>
+                                <td>
+                                    <label for="codpostal">Cod Postal</label>
+                                    <input type="text" name="codpostal" id="codpostal">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email">
+                                </td>
+                                <td colspan="2">
+                                    <label for="sex">Sex</label>
+                                    <ul>
+                                        <li><input type="radio" name="sex" id="sex">M</li>
+                                        <li><input type="radio" name="sex" id="sex2">F</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td colspan="3">
+                                        Informații profesionale
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <ol>
+                                        <li>
+                                            Experienta<br>
+                                            <ul>
+                                                <li>
+                                                    &lt;3 luni
+                                                    <input type="radio" name="exp" id="exp1">
+                                                </li>
+                                                <li>
+                                                    3-6 luni
+                                                    <input type="radio" name="exp" id="exp2">
+                                                </li>
+                                                <li>
+                                                    &gt;6 luni
+                                                    <input type="radio" name="exp" id="exp3">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Alergii<br>
+                                            <ul>
+                                                <li>
+                                                    Alune
+                                                    <input type="checkbox" name="alergii" id="alergii1">
+                                                </li>
+                                                <li>
+                                                    Lactate
+                                                    <input type="checkbox" name="alergii" id="alergii2">
+                                                </li>
+                                                <li>
+                                                    Altele (specifica)
+                                                    <input type="checkbox" name="alergii" id="alergii3">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <textarea name="alergiiexpl" id="alergiiexpl" rows="12"
+                                        cols="20">Explicatie alergii</textarea>
+                                </td>
+                                <td>
+                                    Sunt de acord ca:
+                                    <ul>
+                                        <li>Informații adevărate <input type="checkbox" name="agree" id="agree1"></li>
+                                        <li>Politică confidențialitate <input type="checkbox" name="agree" id="agree2">
+                                        </li>
+                                        <li>Termeni și condiții <input type="checkbox" name="agree" id="agree3"></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td colspan="4">Produse comandate</td>
+                                </tr>
+                                <tr>
+                                    <td>Nr</td>
+                                    <td>Cod</td>
+                                    <td>Nume</td>
+                                    <td>Cantitate</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>
+                                    <input type="text" value="xbx5">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>
+                                    <input type="text" value="kld3">
+                                </td>
+                                <td>
+                                    <input type="text" value="Batoane proteice">
+                                </td>
+                                <td>
+                                    <input type="text" value="1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>
+                                    <input type="text" value="xbx2">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <strong>Arome</strong>
+                                </td>
+                                <td colspan="2">
+                                    <select name="arome" id="arome" multiple>
+                                        <option value="1">Vanilie</option>
+                                        <option value="2">Ciocolata</option>
+                                        <option value="3">Banane</option>
+                                        <option value="4">Capsuni</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comentarii</strong></td>
+                                <td colspan="3">
+                                    <textarea name="comms" id="comms" cols="30" rows="10">Comentarii...</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" value="Submit">Salvează și Tipărește</button>
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

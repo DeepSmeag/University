@@ -1,0 +1,59 @@
+.image {
+    /* background image is icons.jpg */
+    /* scale background image to desired size */
+    /* position background image to show only the grape icon */
+    background-size: 1000px 700px;
+    background-image: url(icons.jpg);
+    background-repeat: no-repeat;
+    /* background-position: -160px -100px; */
+    border: 1px solid #000;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    font-size: 64px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#memGame {
+    width: 800px;
+    height: 800px;
+}
+
+#covered {
+    background: yellow;
+}
+
+#grape {
+    background-position: -160px -100px;
+}
+
+#watermelon {
+    background-position: -345px -100px;
+}
+
+#mango {
+    background-position: -520px -100px;
+}
+
+#strawberry {
+    background-position: -700px -100px;
+}
+
+#kiwi {
+    background-position: -160px -270px;
+}
+
+#lemon {
+    background-position: -340px -270px;
+}
+
+#apple {
+    background-position: -520px -270px;
+}
+
+#pear {
+    background-position: -700px -255px;
+}

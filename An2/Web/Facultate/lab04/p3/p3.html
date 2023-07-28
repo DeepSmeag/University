@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript">
+        var memArray = [];
+        var memValues = [];
+        var memTileId = [];
+        var tilesFlipped = 0;
+
+        initMemory();
+
+        function initMemory() {
+            for (var i = 0; i < 16; i++) {
+                memArray[i] = (Math.floor(i / 2) + 1).toString();
+            }
+        }
+
+        Array.prototype.shuffle = function () {
+            var i = this.length,
+                j, temp;
+            while (--i > 0) {
+                j = Math.floor(Math.random() * (i + 1));
+                temp = this[j];
+                this[j] = this[i];
+                this[i] = temp;
+            }
+        }
+
+        function genBoard() {
+            tilesFlipped = 0;
+            var output = '';
+            memArray.shuffle();
+            for (var i = 0; i < memArray.length; i++) {
+                output += '<div id="tile_' + i + '"></div>';
+            }
+            $('#memBoard').html(output);
+            $('#memBoard div').click(function () {
+                memFlipTile($(this), memArray[$(this).attr('id').split('_')[1]]);
+            });
+        }
+
+        function memFlipTile(tile, val) {
+            if (tile.html() == "" && memValues.length < 2) {
+                tile.css('background', '#FFF').html(val);
+                if (memValues.length == 0) {
+                    memValues.push(val);
+                    memTileId.push(tile.attr('id'));
+                } else if (memValues.length == 1) {
+                    memValues.push(val);
+                    memTileId.push(tile.attr('id'));
+                    if (memValues[0] == memValues[1]) {
+                        tilesFlipped += 2;
+                        memValues = [];
+                        memTileId = [];
+                        if (tilesFlipped == memArray.length) {
+                            alert("Board cleared... generating new board");
+                            $('#memBoard').html("");
+                            genBoard();
+                        }
+                    } else {
+                        function flip2Back() {
+                            var tile_1 = $('#' + memTileId[0]);
+                            var tile_2 = $('#' + memTileId[1]);
+                            tile_1.css('background', 'crimson').html("");
+                            tile_2.css('background', 'crimson').html("");
+                            memValues = [];
+                            memTileId = [];
+                        }
+                        setTimeout(flip2Back, 700);
+                    }
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            genBoard();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="memBoard"></div>
+    <script>genBoard();</script>
+</body>
+
+</html>

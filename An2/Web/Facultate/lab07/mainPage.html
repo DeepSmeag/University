@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autentificare si Inregistrare</title>
+  <style>
+    /* Stilizare pentru aspectul paginii */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Autentificare si Inregistrare</h1>
+
+  <form method="post" action="login_register.php">
+    <label for="email">Adresa de e-mail:</label>
+    <input type="email" name="email" id="email" required>
+
+    <button type="submit" name="action" value="login">Autentificare</button>
+    <button type="submit" name="action" value="register">Inregistrare</button>
+  </form>
+</body>
+</html>
