@@ -1,0 +1,103 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "contests.network.rpcprotocol";
+option java_outer_classname = "RpcWorkerProto";
+
+package rpcprotocol;
+
+message Contest {
+  int32 id = 1;
+  int32 nrParticipanti = 2;
+  string numeProba = 3;
+  string categorieVarsta = 4;
+}
+message Participant {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message OkResponse {}
+message ErrorResponse {
+  string message = 1;
+}
+
+message GetContestsRequest {}
+message GetContestsResponse {
+  repeated Contest contests = 1;
+}
+
+
+message GetParticipantsByProbaRequest {
+  int32 probaId = 1;
+}
+message GetParticipantsRequest {
+}
+message GetParticipantsResponse {
+  repeated Participant participants = 1;
+}
+
+
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+message LoginResponse {
+  string response = 1;
+}
+message LogoutResponse {
+  string response = 1;
+}
+message LogoutRequest {
+  string username = 1;
+  string password = 2;
+}
+message RegisterParticipantRequest {
+  string name = 1;
+  int32 age = 2;
+  Contest contest = 3;
+}
+message UpdateContestsResponse {
+}
+message UpdateParticipantsResponse {
+}
+
+
+message Request {
+  oneof request{
+    GetContestsRequest getContestsRequest = 1;
+    GetParticipantsByProbaRequest getParticipantsByProbaRequest = 2;
+    GetParticipantsRequest getParticipantsRequest = 3;
+    LoginRequest loginRequest = 4;
+    LogoutRequest logoutRequest = 5;
+    RegisterParticipantRequest registerParticipantRequest = 6;
+  }
+}
+message Response {
+  oneof response {
+    OkResponse okResponse = 1;
+    ErrorResponse errorResponse = 2;
+    GetContestsResponse getContestsResponse = 3;
+    GetParticipantsResponse getParticipantsResponse = 4;
+    UpdateResponse updateResponse = 5;
+  }
+}
+message UpdateResponse {
+  oneof updateResponse {
+    UpdateContestsResponse updateContestsResponse = 1;
+    UpdateParticipantsResponse updateParticipantsResponse = 2;
+  }
+}
+
+
+service RpcWorkerService {
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc Logout(LogoutRequest) returns (LogoutResponse);
+  rpc GetContests(GetContestsRequest) returns (GetContestsResponse);
+  rpc GetParticipants(GetParticipantsRequest) returns (GetParticipantsResponse);
+  rpc GetParticipantsByProba(GetParticipantsByProbaRequest) returns (GetParticipantsResponse);
+  rpc AttemptRegisterParticipant(RegisterParticipantRequest) returns (Response);
+  rpc ListenForUpdates(LoginRequest) returns (stream UpdateResponse);
+}

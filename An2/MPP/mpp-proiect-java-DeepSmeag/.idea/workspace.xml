@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="621f0e30-4c88-4b64-bbdf-c81cc4021f3a" name="Changes" comment="current state with orm">
+      <change afterPath="$PROJECT_DIR$/db.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/networkingModule/src/main/java/contests/network/StartRestServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverModule/db.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverModule/src/main/java/RestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serverModule/src/main/java/service/ServiceProba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelModule/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/modelModule/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelModule/src/main/java/contests/model/CategorieVarsta.java" beforeDir="false" afterPath="$PROJECT_DIR$/modelModule/src/main/java/contests/model/CategorieVarsta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelModule/src/main/java/contests/model/NumeProba.java" beforeDir="false" afterPath="$PROJECT_DIR$/modelModule/src/main/java/contests/model/NumeProba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelModule/src/main/java/contests/model/Proba.java" beforeDir="false" afterPath="$PROJECT_DIR$/modelModule/src/main/java/contests/model/Proba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networkingModule/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/networkingModule/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistenceModule/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/persistenceModule/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistenceModule/src/main/java/contests/persistence/ProbaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistenceModule/src/main/java/contests/persistence/ProbaRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverModule/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/serverModule/build.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/mainModule">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/modelModule">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/networkingModule">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/persistenceModule">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/serverModule">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/servicesModule">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/sqlModule">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/mainModule">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/sqlModule">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/serverModule">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-proiect-java-DeepSmeag" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-proiect-java-DeepSmeag" type="f1a62948:ProjectNode" />
+                <item name="networkingModule" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-proiect-java-DeepSmeag" type="f1a62948:ProjectNode" />
+                <item name="networkingModule" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-proiect-java-DeepSmeag" type="f1a62948:ProjectNode" />
+                <item name="networkingModule" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-proiect-java-DeepSmeag" type="f1a62948:ProjectNode" />
+                <item name="networkingModule" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hibernateorm" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2MgC66tRoypRaL7Unq9HE69NCBK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/CodingAndDev/Projects/java/mpp-proiect-java-DeepSmeag&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5be24e5d070b61fa577dab9c73f5955a&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\serverModule" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\servicesModule" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\persistenceModule" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\networkingModule\src\main\java\contests\network\objectprotocol" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\serverModule\src\main\java" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\networkingModule" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\networkingModule\src\main" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\networkingModule\src\main\java" />
+      <recent name="E:\CodingAndDev\Projects\java\mpp-proiect-java-DeepSmeag\mainModule" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="contests.network" />
+      <recent name="contests.network.rpcprotocol" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="contests.server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.StartRestServices">
+    <configuration name="RestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RestClient" />
+      <module name="mpp-proiect-java-DeepSmeag.serverModule.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle" singleton="false">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="persistenceModule::CodingAndDev:Projects:java:mpp-proiect-java-DeepSmeag [:networkingModule:run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":networkingModule:run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="StartRestServices" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mpp-proiect-java-DeepSmeag.networkingModule.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="contests.network.StartRestServices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contests.network.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.RestClient" />
+      <item itemvalue="Gradle.persistenceModule::CodingAndDev:Projects:java:mpp-proiect-java-DeepSmeag [:networkingModule:run]" />
+      <item itemvalue="HTTP Request.generated-requests | #3" />
+      <item itemvalue="HTTP Request.All in generated-requests" />
+      <item itemvalue="Spring Boot.StartRestServices" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.StartRestServices" />
+        <item itemvalue="Application.RestClient" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
+        <item itemvalue="HTTP Request.All in generated-requests" />
+        <item itemvalue="Gradle.persistenceModule::CodingAndDev:Projects:java:mpp-proiect-java-DeepSmeag [:networkingModule:run]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="621f0e30-4c88-4b64-bbdf-c81cc4021f3a" name="Changes" comment="" />
+      <created>1678179659963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678179659963</updated>
+      <workItem from="1678179661220" duration="456000" />
+      <workItem from="1678183622130" duration="40000" />
+      <workItem from="1678713001648" duration="5761000" />
+      <workItem from="1678775841283" duration="87000" />
+      <workItem from="1678781589667" duration="5710000" />
+      <workItem from="1679318947987" duration="5086000" />
+      <workItem from="1679346931012" duration="6262000" />
+      <workItem from="1679385975966" duration="5494000" />
+      <workItem from="1679944947350" duration="10492000" />
+      <workItem from="1679980787682" duration="9370000" />
+      <workItem from="1679992503047" duration="744000" />
+      <workItem from="1679994689887" duration="2934000" />
+      <workItem from="1680425795730" duration="9134000" />
+      <workItem from="1681032834335" duration="3872000" />
+      <workItem from="1681039396058" duration="14604000" />
+      <workItem from="1681114154080" duration="18112000" />
+      <workItem from="1681190469189" duration="2033000" />
+      <workItem from="1681194236483" duration="221000" />
+      <workItem from="1681197005373" duration="1968000" />
+      <workItem from="1682265800993" duration="5050000" />
+      <workItem from="1682331799019" duration="6523000" />
+      <workItem from="1682360835397" duration="2722000" />
+      <workItem from="1682407396994" duration="289000" />
+      <workItem from="1682934968650" duration="4287000" />
+      <workItem from="1682956322649" duration="16522000" />
+      <workItem from="1683012871762" duration="2075000" />
+      <workItem from="1683035340875" duration="285000" />
+      <workItem from="1683054341667" duration="415000" />
+      <workItem from="1683055149381" duration="319000" />
+      <workItem from="1683545658542" duration="41000" />
+      <workItem from="1683579765509" duration="1264000" />
+      <workItem from="1683616985595" duration="1939000" />
+      <workItem from="1684090950284" duration="2670000" />
+      <workItem from="1684138992115" duration="11570000" />
+      <workItem from="1684220783411" duration="4109000" />
+      <workItem from="1684685372641" duration="7000" />
+      <workItem from="1684762319726" duration="2475000" />
+      <workItem from="1684826264251" duration="896000" />
+      <workItem from="1684836165712" duration="166000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial files before 1st iteration">
+      <created>1678180038178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678180038178</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added misc file for notes">
+      <created>1678183654532</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678183654532</updated>
+    </task>
+    <task id="LOCAL-00003" summary="domain + repo interface added">
+      <created>1678719302100</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678719302100</updated>
+    </task>
+    <task id="LOCAL-00004" summary="implementation repo + logger">
+      <created>1679392301430</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679392301430</updated>
+    </task>
+    <task id="LOCAL-00005" summary="impelementation service facade + other stuff">
+      <created>1679997548375</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679997548375</updated>
+    </task>
+    <task id="LOCAL-00006" summary="client server with object protocol">
+      <created>1682935379975</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682935379975</updated>
+    </task>
+    <task id="LOCAL-00007" summary="grpc">
+      <created>1683579852968</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683579852968</updated>
+    </task>
+    <task id="LOCAL-00008" summary="current state with orm">
+      <created>1684090993792</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684090993792</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="grpc" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="initial files before 1st iteration" />
+    <MESSAGE value="added misc file for notes" />
+    <MESSAGE value="domain + repo interface added" />
+    <MESSAGE value="implementation repo + logger" />
+    <MESSAGE value="impelementation service facade + other stuff" />
+    <MESSAGE value="client server with object protocol" />
+    <MESSAGE value="grpc" />
+    <MESSAGE value="current state with orm" />
+    <option name="LAST_COMMIT_MESSAGE" value="current state with orm" />
+  </component>
+</project>

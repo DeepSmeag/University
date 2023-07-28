@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "HelloWorldGrpc";
+
+package helloworld;
+
+service HelloWorldService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+  rpc GetUsers (GetUsersRequest) returns (GetUsersResponse);
+}
+
+message HelloRequest {
+  string message = 1;
+}
+
+message HelloResponse {
+  string message = 2;
+}
+message User {
+  string name = 1;
+  string password = 2;
+}
+
+message GetUsersRequest {
+  // Add any necessary fields for the request if needed.
+}
+
+message GetUsersResponse {
+  repeated User users = 1;
+}

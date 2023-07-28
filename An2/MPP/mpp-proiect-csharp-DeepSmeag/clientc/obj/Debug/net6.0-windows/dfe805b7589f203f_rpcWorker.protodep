@@ -1,0 +1,2 @@
+obj\Debug\net6.0-windows\proto/RpcWorker.cs \
+obj\Debug\net6.0-windows\proto/RpcWorkerGrpc.cs: proto/rpcWorker.proto

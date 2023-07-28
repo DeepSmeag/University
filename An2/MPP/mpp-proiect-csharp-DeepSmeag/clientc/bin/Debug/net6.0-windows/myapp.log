@@ -1,0 +1,90 @@
+2023-04-25 10:53:57,088 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-04-25 11:06:30,973 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-04-25 11:08:58,363 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=0 }
+2023-04-25 11:09:06,993 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=4 }
+2023-04-25 11:09:08,036 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=5 }
+2023-05-01 21:38:23,102 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 21:41:46,801 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:06:16,286 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:07:22,455 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:35:41,041 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:46:31,728 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:50:08,561 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:51:50,417 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:52:41,509 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:52:50,295 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=2 }
+2023-05-01 22:52:51,815 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=3 }
+2023-05-01 22:52:52,306 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=4 }
+2023-05-01 22:52:52,616 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=5 }
+2023-05-01 22:52:53,101 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=0 }
+2023-05-01 22:52:53,542 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=0 }
+2023-05-01 22:52:53,927 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=1 }
+2023-05-01 22:52:54,217 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=2 }
+2023-05-01 22:52:54,496 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=4 }
+2023-05-01 22:52:54,781 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-01 22:52:55,857 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=5 }
+2023-05-01 22:52:56,151 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=1 }
+2023-05-01 22:53:34,094 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:55:53,150 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:56:01,393 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=2 }
+2023-05-01 22:56:02,323 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=3 }
+2023-05-01 22:56:03,209 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=4 }
+2023-05-01 22:56:04,631 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-01 22:56:08,365 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-01 22:56:09,662 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=6 }
+2023-05-01 22:56:11,260 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=3 }
+2023-05-01 22:56:11,948 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=2 }
+2023-05-01 22:56:12,949 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-01 22:56:15,296 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-01 22:56:15,699 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-01 22:56:16,087 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-01 22:56:17,755 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=0 }
+2023-05-01 22:56:19,446 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=1 }
+2023-05-01 22:56:20,602 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=2 }
+2023-05-01 22:56:21,078 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=3 }
+2023-05-01 22:56:21,754 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=4 }
+2023-05-01 22:57:40,354 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 22:57:48,040 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-01 22:58:03,784 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-01 22:58:04,245 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-01 23:35:43,174 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-01 23:36:29,056 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:01:04,272 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:01:16,403 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-02 00:01:17,214 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:02:13,294 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:02:22,882 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:03:40,569 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:03:43,683 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:03:51,436 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:04:32,201 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:04:39,810 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:21:44,753 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:22:22,850 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:22:49,045 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:22:54,909 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-02 00:22:55,512 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:22:57,005 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-02 00:22:57,366 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:24:45,553 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:24:56,671 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:25:12,924 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:25:38,209 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:26:34,932 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-02 00:26:35,387 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:28:02,557 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:28:43,399 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:29:10,043 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:29:26,007 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 00:31:00,099 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 00:31:16,465 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=8 }
+2023-05-02 10:49:16,159 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-02 10:49:47,296 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=6 }
+2023-05-02 10:50:17,582 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=6 }
+2023-05-02 10:50:49,796 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=6 }
+2023-05-02 10:51:32,020 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-02 10:52:07,958 [1] INFO mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu - DataGridViewRow { Index=7 }
+2023-05-09 00:25:28,172 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-09 10:49:18,223 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-09 10:50:06,413 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started
+2023-05-15 15:41:02,321 [1] INFO mpp_proiect_csharp_DeepSmeag.Program - Application started

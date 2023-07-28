@@ -1,0 +1,56 @@
+buildscript {
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:3.0.6"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'application'
+
+
+
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+// Note: for IntelliJ IDE to mark the generated files as source.
+
+
+
+repositories {
+    mavenCentral()
+}
+application {
+    mainClass = 'StartObjectServer'
+}
+
+// Visit https://mvnrepository.com/artifact/io.grpc/grpc-protobuf
+def grpcVersion = '1.54.1'
+
+dependencies {
+    implementation project(':modelModule')
+    implementation project(':persistenceModule')
+//    implementation project(':networkingModule')
+    implementation project(':servicesModule')
+
+    implementation "org.springframework.boot:spring-boot-starter-web:3.0.6"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:3.0.6"
+
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.0'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.14.0'
+
+
+    implementation('org.postgresql:postgresql:42.5.0')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+
+test {
+    useJUnitPlatform()
+}

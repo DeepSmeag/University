@@ -1,0 +1,347 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\server\\server.csproj": {}
+  },
+  "projects": {
+    "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj",
+        "projectName": "models",
+        "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj",
+        "packagesPath": "C:\\Users\\Cosmin\\.nuget\\packages\\",
+        "outputPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cosmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\networking\\networking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\networking\\networking.csproj",
+        "projectName": "networking",
+        "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\networking\\networking.csproj",
+        "packagesPath": "C:\\Users\\Cosmin\\.nuget\\packages\\",
+        "outputPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\networking\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cosmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj"
+              },
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.22.3, )"
+            },
+            "Grpc": {
+              "target": "Package",
+              "version": "[2.46.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\persistence\\persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\persistence\\persistence.csproj",
+        "projectName": "persistence",
+        "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\persistence\\persistence.csproj",
+        "packagesPath": "C:\\Users\\Cosmin\\.nuget\\packages\\",
+        "outputPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cosmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\server\\server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\server\\server.csproj",
+        "projectName": "server",
+        "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\server\\server.csproj",
+        "packagesPath": "C:\\Users\\Cosmin\\.nuget\\packages\\",
+        "outputPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cosmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj"
+              },
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\networking\\networking.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\networking\\networking.csproj"
+              },
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj",
+        "projectName": "services",
+        "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\services.csproj",
+        "packagesPath": "C:\\Users\\Cosmin\\.nuget\\packages\\",
+        "outputPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Cosmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\models\\models.csproj"
+              },
+              "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\persistence\\persistence.csproj": {
+                "projectPath": "E:\\CodingAndDev\\Projects\\C#\\mpp-proiect-csharp-DeepSmeag\\persistence\\persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

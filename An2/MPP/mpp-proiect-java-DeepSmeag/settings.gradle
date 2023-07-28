@@ -1,0 +1,10 @@
+rootProject.name = 'mpp-proiect-java-DeepSmeag'
+
+include 'modelModule'
+include 'networkingModule'
+include 'persistenceModule'
+include 'serverModule'
+include 'servicesModule'
+include 'sqlModule'
+
+

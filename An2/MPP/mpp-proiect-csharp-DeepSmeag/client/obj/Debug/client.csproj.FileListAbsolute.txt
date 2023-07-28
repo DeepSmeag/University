@@ -1,0 +1,7 @@
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\client.csproj.AssemblyReference.cache
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\client.csproj.SuggestedBindingRedirects.cache
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\client.Properties.Resources.resources
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\mpp_proiect_csharp_DeepSmeag.uiForms.LoginMenu.resources
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\mpp_proiect_csharp_DeepSmeag.uiForms.MainMenu.resources
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\client.csproj.GenerateResource.cache
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\client\obj\Debug\client.csproj.CoreCompileInputs.cache

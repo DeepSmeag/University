@@ -1,0 +1,12 @@
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\bin\Debug\net6.0\models.deps.json
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\bin\Debug\net6.0\models.dll
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\bin\Debug\net6.0\models.pdb
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.csproj.AssemblyReference.cache
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.GeneratedMSBuildEditorConfig.editorconfig
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.AssemblyInfoInputs.cache
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.AssemblyInfo.cs
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.csproj.CoreCompileInputs.cache
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.dll
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\refint\models.dll
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\models.pdb
+E:\CodingAndDev\Projects\C#\mpp-proiect-csharp-DeepSmeag\models\obj\Debug\net6.0\ref\models.dll
