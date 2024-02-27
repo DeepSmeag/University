@@ -1,0 +1,18 @@
+Pentru partea a 2-a e nevoie de schimbari si adaugari in codul de la partea 1.
+
+- se fac 2 functii de verificare neterminal si terminal, acum ca neterminalele si terminalele pot fi cuvinte intregi
+- se stabileste formatul FIP 
+    (keyword = 0, constanta = 1, identificator = 2)
+    - format FIP : [ categorie, text, idFIP ] , in ordinea in care apar (idFIP ar fi ordinea in care apar in codul sursa)
+    - nu e nevoie de altceva, ma intereseaza doar sa stiu categoria ca sa o pot potrivi in regulile de productie; 
+- scopul cu FIP e sa recreez codul sursa, pot face asta cu FIP in formatul de mai sus 
+- odata ce am codul sursa si regulile de productie doar aplic ca inainte algoritmul de analiza sintactica
+
+
+- modificare alg analiza sintactica
+    - vor fi si situatii in care am NETERMINAL terminal NETERMINAL, trebuie sa ma asigur ca imi face bine analiza si asa
+        - trebuie sa verific manual tipurile de situatii pe baza regulilor de productie, si asa vad ce anume trebuie modificat la algoritm
+        - Codul care verifica candidat nu mai poate verifica doar inceputul de string, trebuie sa verific daca e substring pe undeva bucata pe care o am in acel moment
+    - trebuie modificata functia de verificare de sol candidat ( cea de sol e ok, verifica daca len = lensol si daca stiva de analiza e vida)
+
+Mentiune legat de situatiile Aa, AaA, aAa - mecanismul de tinut cont opIndex trebuie schimbat cu totul ca sa mearga; atata timp cat derivarile sunt mereu cu terminal la stanga, merge

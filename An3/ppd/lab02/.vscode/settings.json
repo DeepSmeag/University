@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.m": "octave",
+        "*.css": "css",
+        "iostream": "cpp",
+        "condition_variable": "cpp",
+        "thread": "cpp",
+        "chrono": "cpp"
+    }
+}

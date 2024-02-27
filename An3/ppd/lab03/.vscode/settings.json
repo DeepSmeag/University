@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.m": "octave",
+        "*.css": "css",
+        "chrono": "cpp",
+        "ostream": "cpp"
+    }
+}

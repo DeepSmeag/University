@@ -1,0 +1,72 @@
+Configuration dx: 1, p_r: 4, p_w: 4, dt: 1
+Server process execution time: 50514 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 4, dt: 2
+Server process execution time: 50460 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 4, dt: 4
+Server process execution time: 50454 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 2, p_w: 2, dt: 1
+Server process execution time: 50526 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 2, p_w: 2, dt: 2
+Server process execution time: 50485 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 2, p_w: 2, dt: 4
+Server process execution time: 50525 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 2, dt: 1
+Server process execution time: 50559 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 2, dt: 2
+Server process execution time: 50557 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 2, dt: 4
+Server process execution time: 50517 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 8, dt: 1
+Server process execution time: 50505 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 8, dt: 2
+Server process execution time: 50502 milliseconds
+----------------------------------------------
+Configuration dx: 1, p_r: 4, p_w: 8, dt: 4
+Server process execution time: 50539 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 4, dt: 1
+Server process execution time: 100515 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 4, dt: 2
+Server process execution time: 100492 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 4, dt: 4
+Server process execution time: 100523 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 2, p_w: 2, dt: 1
+Server process execution time: 100515 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 2, p_w: 2, dt: 2
+Server process execution time: 100593 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 2, p_w: 2, dt: 4
+Server process execution time: 100581 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 2, dt: 1
+Server process execution time: 100521 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 2, dt: 2
+Server process execution time: 100543 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 2, dt: 4
+Server process execution time: 100510 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 8, dt: 1
+Server process execution time: 100497 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 8, dt: 2
+Server process execution time: 100637 milliseconds
+----------------------------------------------
+Configuration dx: 2, p_r: 4, p_w: 8, dt: 4
+Server process execution time: 100468 milliseconds
+----------------------------------------------

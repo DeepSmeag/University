@@ -1,0 +1,110 @@
+C++ Static
+
+Configuration 10x10 matrix, 3x3 convolution, 4 threads, average time: 157300ns or 0.1573ms (0.24833 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 1 threads, average time: 182130540ns or 182.131ms (193.208 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 2 threads, average time: 100985390ns or 100.985ms (107.723 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 4 threads, average time: 66024880ns or 66.0249ms (75.225 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 8 threads, average time: 63756840ns or 63.7568ms (76.5938 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 16 threads, average time: 59312740ns or 59.3127ms (70.7985 ms / 66)
+Configuration 10x10000 matrix, 5x5 convolution, 1 threads, average time: 18732950ns or 18.7329ms
+Configuration 10x10000 matrix, 5x5 convolution, 2 threads, average time: 9411400ns or 9.4114ms
+Configuration 10x10000 matrix, 5x5 convolution, 4 threads, average time: 6772180ns or 6.77218ms
+Configuration 10x10000 matrix, 5x5 convolution, 8 threads, average time: 8672820ns or 8.67282ms
+Configuration 10x10000 matrix, 5x5 convolution, 16 threads, average time: 6281220ns or 6.28122ms
+Configuration 10000x10 matrix, 5x5 convolution, 1 threads, average time: 18921890ns or 18.9219ms
+Configuration 10000x10 matrix, 5x5 convolution, 2 threads, average time: 10699720ns or 10.6997ms
+Configuration 10000x10 matrix, 5x5 convolution, 4 threads, average time: 7418340ns or 7.41834ms
+Configuration 10000x10 matrix, 5x5 convolution, 8 threads, average time: 7018910ns or 7.01891ms
+Configuration 10000x10 matrix, 5x5 convolution, 16 threads, average time: 6194080ns or 6.19408
+
+C++ Dynamic
+
+Configuration 10x10 matrix, 3x3 convolution, 4 threads, average time: 22600ns or 0.0226ms
+Configuration 1000x1000 matrix, 5x5 convolution, 1 threads, average time: 185740510ns or 185.741ms
+Configuration 1000x1000 matrix, 5x5 convolution, 2 threads, average time: 117717010ns or 117.717ms
+Configuration 1000x1000 matrix, 5x5 convolution, 4 threads, average time: 62814610ns or 62.8146ms (75.5771 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 8 threads, average time: 67490710ns or 67.4907ms (83.7542 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 16 threads, average time: 64168960ns or 64.169ms (78.4168 ms)
+Configuration 10x10000 matrix, 5x5 convolution, 1 threads, average time: 18602710ns or 18.6027ms
+Configuration 10x10000 matrix, 5x5 convolution, 2 threads, average time: 10208660ns or 10.2087ms
+Configuration 10x10000 matrix, 5x5 convolution, 4 threads, average time: 8034550ns or 8.03455ms
+Configuration 10x10000 matrix, 5x5 convolution, 8 threads, average time: 7708830ns or 7.70883ms
+Configuration 10x10000 matrix, 5x5 convolution, 16 threads, average time: 6666800ns or 6.6668ms
+Configuration 10000x10 matrix, 5x5 convolution, 1 threads, average time: 19859200ns or 19.8592ms
+Configuration 10000x10 matrix, 5x5 convolution, 2 threads, average time: 10039590ns or 10.0396ms
+Configuration 10000x10 matrix, 5x5 convolution, 4 threads, average time: 7401120ns or 7.40112ms
+Configuration 10000x10 matrix, 5x5 convolution, 8 threads, average time: 6681410ns or 6.68141ms
+Configuration 10000x10 matrix, 5x5 convolution, 16 threads, average time: 5749670ns or 5.74967
+
+C++ Static column-oriented
+Configuration 10x10 matrix, 3x3 convolution, 4 threads, average time: 191100ns or 0.1911ms (0.2ms independent runs avg of 100)
+Configuration 1000x1000 matrix, 5x5 convolution, 1 threads, average time: 185630020ns or 185.63ms (193.94ms changed to 10 here)
+Configuration 1000x1000 matrix, 5x5 convolution, 2 threads, average time: 101337510ns or 101.338ms (103.94ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 4 threads, average time: 65242390ns or 65.2424ms (74.0744 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 8 threads, average time: 63289300ns or 63.2893ms (72.9359 ms)
+Configuration 1000x1000 matrix, 5x5 convolution, 16 threads, average time: 61655100ns or 61.6551ms  (65.0059 ms)
+Configuration 10x10000 matrix, 5x5 convolution, 1 threads, average time: 20236170ns or 20.2362ms (19.3231 ms)
+Configuration 10x10000 matrix, 5x5 convolution, 2 threads, average time: 10100360ns or 10.1004ms (11.0817 ms)
+Configuration 10x10000 matrix, 5x5 convolution, 4 threads, average time: 6633180ns or 6.63318ms
+Configuration 10x10000 matrix, 5x5 convolution, 8 threads, average time: 6895350ns or 6.89535ms
+Configuration 10x10000 matrix, 5x5 convolution, 16 threads, average time: 5807940ns or 5.80794ms
+Configuration 10000x10 matrix, 5x5 convolution, 1 threads, average time: 19455940ns or 19.4559ms
+Configuration 10000x10 matrix, 5x5 convolution, 2 threads, average time: 10505030ns or 10.505ms
+Configuration 10000x10 matrix, 5x5 convolution, 4 threads, average time: 7882100ns or 7.8821ms
+Configuration 10000x10 matrix, 5x5 convolution, 8 threads, average time: 7672140ns or 7.67214ms
+Configuration 10000x10 matrix, 5x5 convolution, 16 threads, average time: 7082520ns or 7.08252
+
+C++ Dynamic column-oriented
+Configuration 10x10 matrix, 3x3 convolution, 4 threads, average time: 46890ns or 0.04689ms
+Configuration 1000x1000 matrix, 5x5 convolution, 1 threads, average time: 190708250ns or 190.708ms
+Configuration 1000x1000 matrix, 5x5 convolution, 2 threads, average time: 105794000ns or 105.794ms
+Configuration 1000x1000 matrix, 5x5 convolution, 4 threads, average time: 63455340ns or 63.4553ms
+Configuration 1000x1000 matrix, 5x5 convolution, 8 threads, average time: 66329260ns or 66.3293ms
+Configuration 1000x1000 matrix, 5x5 convolution, 16 threads, average time: 60846340ns or 60.8463ms
+Configuration 10x10000 matrix, 5x5 convolution, 1 threads, average time: 18513930ns or 18.5139ms
+Configuration 10x10000 matrix, 5x5 convolution, 2 threads, average time: 10578460ns or 10.5785ms
+Configuration 10x10000 matrix, 5x5 convolution, 4 threads, average time: 5759980ns or 5.75998ms
+Configuration 10x10000 matrix, 5x5 convolution, 8 threads, average time: 7562100ns or 7.5621ms
+Configuration 10x10000 matrix, 5x5 convolution, 16 threads, average time: 6211070ns or 6.21107ms
+Configuration 10000x10 matrix, 5x5 convolution, 1 threads, average time: 19557880ns or 19.5579ms
+Configuration 10000x10 matrix, 5x5 convolution, 2 threads, average time: 10772080ns or 10.7721ms
+Configuration 10000x10 matrix, 5x5 convolution, 4 threads, average time: 8180680ns or 8.18068ms
+Configuration 10000x10 matrix, 5x5 convolution, 8 threads, average time: 7273690ns or 7.27369ms
+Configuration 10000x10 matrix, 5x5 convolution, 16 threads, average time: 7200490ns or 7.20049
+
+Java row
+Configuration 10x10 matrix, 3x3 convolution, 1 threads, average time: 0.9ms
+Configuration 10x10 matrix, 3x3 convolution, 4 threads, average time: 4.1ms
+Configuration 1000x1000 matrix, 5x5 convolution, 1 threads, average time:  58.4ms
+Configuration 1000x1000 matrix, 5x5 convolution, 2 threads, average time: 92.9ms
+Configuration 1000x1000 matrix, 5x5 convolution, 4 threads, average time: 122.4ms
+Configuration 1000x1000 matrix, 5x5 convolution, 8 threads, average time: 202.5ms / 176ms
+Configuration 1000x1000 matrix, 5x5 convolution, 16 threads, average time: 311ms / 266.5ms
+Configuration 10x10000 matrix, 5x5 convolution, 1 threads, average time: 35ms
+Configuration 10x10000 matrix, 5x5 convolution, 2 threads, average time: 51.8ms
+Configuration 10x10000 matrix, 5x5 convolution, 4 threads, average time: 93.4ms
+Configuration 10x10000 matrix, 5x5 convolution, 8 threads, average time: 114.5ms
+Configuration 10x10000 matrix, 5x5 convolution, 16 threads, average time: 141.1ms
+Configuration 10000x10 matrix, 5x5 convolution, 1 threads, average time: 13.9ms
+Configuration 10000x10 matrix, 5x5 convolution, 2 threads, average time: 41.7ms
+Configuration 10000x10 matrix, 5x5 convolution, 4 threads, average time: 87.1ms
+Configuration 10000x10 matrix, 5x5 convolution, 8 threads, average time: 132ms
+Configuration 10000x10 matrix, 5x5 convolution, 16 threads, average time: 133.9ms / 117.3ms
+
+Java col
+Configuration 10x10 matrix, 3x3 convolution, 4 threads, average time: 2.3ms
+Configuration 1000x1000 matrix, 5x5 convolution, 1 threads, average time:  65ms
+Configuration 1000x1000 matrix, 5x5 convolution, 2 threads, average time: 114.2ms
+Configuration 1000x1000 matrix, 5x5 convolution, 4 threads, average time: 154.8ms
+Configuration 1000x1000 matrix, 5x5 convolution, 8 threads, average time: 297.4ms
+Configuration 1000x1000 matrix, 5x5 convolution, 16 threads, average time: 
+Configuration 10x10000 matrix, 5x5 convolution, 1 threads, average time: 
+Configuration 10x10000 matrix, 5x5 convolution, 2 threads, average time: 
+Configuration 10x10000 matrix, 5x5 convolution, 4 threads, average time: 
+Configuration 10x10000 matrix, 5x5 convolution, 8 threads, average time: 
+Configuration 10x10000 matrix, 5x5 convolution, 16 threads, average time: 
+Configuration 10000x10 matrix, 5x5 convolution, 1 threads, average time: 18.7ms
+Configuration 10000x10 matrix, 5x5 convolution, 2 threads, average time: 
+Configuration 10000x10 matrix, 5x5 convolution, 4 threads, average time: 
+Configuration 10000x10 matrix, 5x5 convolution, 8 threads, average time: 
+Configuration 10000x10 matrix, 5x5 convolution, 16 threads, average time: 265.2ms

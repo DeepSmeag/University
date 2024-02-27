@@ -1,0 +1,15 @@
+Stare Q0
+Stare Q1
+Stare Q2
+Stare Q3
+Stare Q4
+StareFinala Q4
+Alfabet a
+Alfabet b
+StareInitiala Q0
+Tranzitie Q0 a Q1
+Tranzitie Q1 a Q2
+Tranzitie Q2 a Q2
+Tranzitie Q2 b Q3
+Tranzitie Q3 b Q4
+Tranzitie Q4 b Q4

@@ -1,0 +1,30 @@
+ int readnum = 0;
+        int stop = 0;
+        try {
+            while (stop < 5) {
+
+                for (int socketIndex = 0; socketIndex < sockets.size(); socketIndex++) {
+                    if (requested[socketIndex]) {
+                        continue;
+                    }
+                    System.out.println("Server: Socket " + socketIndex + " hasn't requested yet");
+                    InputStream in = sockets.get(socketIndex).getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        System.out.println(line);
+                        if (line.equals("request")) {
+                            requested[socketIndex] = true;
+                            stop++;
+                            readnum++;
+                            break;
+                        }
+                        readnum++;
+                    }
+                }
+            }
+            doneReading = true;
+            System.out.println("Server: Reader thread - done reading, read " + readnum + " lines");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }

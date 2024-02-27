@@ -1,0 +1,12 @@
+Producer type
+
+Consumer type
+
+
+
+p producers create i items every x milliseconds. There can be a maximum of n items in the buffer. If buffer is full, producers wait
+c consumers consume j items every y milliseconds. If buffer is empty, consumers wait
+
+critical resource list - producers and consumers share a list of items. The list is a log of all the operations
+
+A separate thread goes through the list every z milliseconds and prints the contents of the list

@@ -1,0 +1,56 @@
+Secvential
+
+Average: 49.8499 ms
+
+Parallel (sorting at the end)
+Average Elapsed Time for 4 processes with 1 readers: 170.404 ms
+Average Elapsed Time for 6 processes with 1 readers: 153.282 ms
+Average Elapsed Time for 8 processes with 1 readers: 143.415 ms
+Average Elapsed Time for 16 processes with 1 readers: 141.799 ms
+Average Elapsed Time for 4 processes with 2 readers: 40.8524 ms
+Average Elapsed Time for 6 processes with 2 readers: 51.9384 ms
+Average Elapsed Time for 8 processes with 2 readers: 63.1569 ms
+Average Elapsed Time for 16 processes with 2 readers: 65.7159 ms
+(sorting throughout adding via direct insertion)
+Average Elapsed Time for 4 processes with 1 readers: 179.834 ms
+Average Elapsed Time for 6 processes with 1 readers: 159.296 ms
+Average Elapsed Time for 8 processes with 1 readers: 165.343 ms
+Average Elapsed Time for 16 processes with 1 readers: 148.099 ms
+Average Elapsed Time for 4 processes with 2 readers: 45.5999 ms
+Average Elapsed Time for 6 processes with 2 readers: 58.9152 ms
+Average Elapsed Time for 8 processes with 2 readers: 66.972 ms
+Average Elapsed Time for 16 processes with 2 readers: 71.7126 ms
+
+For fun (sorting at the end)
+Average Elapsed Time for 20 processes with 5 readers: 36.0725 ms
+Average Elapsed Time for 20 processes with 10 readers: 28.9148 ms
+Average Elapsed Time for 40 processes with 10 readers: 28.0553 ms
+Average Elapsed Time for 80 processes with 10 readers: 30.4754 ms
+(sorting while adding via direct insertion)
+Average Elapsed Time for 20 processes with 5 readers: 44.6923 ms
+Average Elapsed Time for 20 processes with 10 readers: 27.9861 ms
+Average Elapsed Time for 40 processes with 10 readers: 32.2202 ms
+Average Elapsed Time for 80 processes with 10 readers: 32.6556 ms
+
+Conclusion: main bottleneck is reading time; the overhead of introducing threads is only felt when having 1 reader; increasing readers to a min. of 2 will at least offset the overhead
+
+
+
+
+For fine-grain sync
+max 50 in queue
+
+Average Elapsed Time for 6 processes with 4 readers: 131.148 ms
+Average Elapsed Time for 8 processes with 4 readers: 73.7476 ms
+Average Elapsed Time for 16 processes with 4 readers: 45.8107 ms
+
+max 100 in queue
+
+Average Elapsed Time for 6 processes with 4 readers: 135.227 ms
+Average Elapsed Time for 8 processes with 4 readers: 70.4094 ms
+Average Elapsed Time for 16 processes with 4 readers: 42.7258 ms
+
+
+Conclusiton: The more sync we have the worse the numbers
+            adding more threads helps in this case, I assume at some point we'll see diminishing returns / overhead of spawning more threads
+            at the same time, allowing the reading queue to have more numbers improves the numbers; aka "don't bottleneck through the reading op"

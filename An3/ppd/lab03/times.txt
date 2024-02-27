@@ -1,0 +1,15 @@
+T1 - measuring before reading data until after writing to file
+
+
+Average Elapsed Time for 5 processes: 559.936 ms
+Average Elapsed Time for 9 processes: 650.483 ms
+Average Elapsed Time for 21 processes: 994.709 ms
+
+T2 - measuring just the calculations 
+(in reality we also measure the input reading and transfer of the information to other processes)
+
+Average Elapsed Time for 5 processes: 229.47 ms
+Average Elapsed Time for 9 processes: 270.301 ms
+Average Elapsed Time for 21 processes: 607.099 ms
+
+Conclusions - way bigger than before, it's the overhead of creating processes and moving lots of data around

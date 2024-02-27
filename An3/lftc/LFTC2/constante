@@ -1,0 +1,45 @@
+Stare Q0
+Stare Q1
+Stare Q2
+Alfabet 0
+Alfabet 1
+Alfabet 2
+Alfabet 3
+Alfabet 4
+Alfabet 5
+Alfabet 6
+Alfabet 7
+Alfabet 8
+Alfabet 9
+Alfabet -
+Tranzitie Q0 0 Q2
+Tranzitie Q0 - Q1
+Tranzitie Q0 1 Q1
+Tranzitie Q0 2 Q1
+Tranzitie Q0 3 Q1
+Tranzitie Q0 4 Q1
+Tranzitie Q0 5 Q1
+Tranzitie Q0 6 Q1
+Tranzitie Q0 7 Q1
+Tranzitie Q0 8 Q1
+Tranzitie Q0 9 Q1
+Tranzitie Q1 0 Q1
+Tranzitie Q1 1 Q1
+Tranzitie Q1 2 Q1
+Tranzitie Q1 3 Q1
+Tranzitie Q1 4 Q1
+Tranzitie Q1 5 Q1
+Tranzitie Q1 6 Q1
+Tranzitie Q1 7 Q1
+Tranzitie Q1 8 Q1
+Tranzitie Q1 9 Q1
+Tranzitie Q1 0 Q2
+Tranzitie Q1 1 Q2
+Tranzitie Q1 2 Q2
+Tranzitie Q1 3 Q2
+Tranzitie Q1 4 Q2
+Tranzitie Q1 5 Q2
+Tranzitie Q1 6 Q2
+Tranzitie Q1 7 Q2
+Tranzitie Q1 8 Q2
+Tranzitie Q1 9 Q2

@@ -1,0 +1,12 @@
+Pentru primul Inclass  Java- suma de doi vectori de dim n => vectorul suma.
+
+
+1)Functie de calcul secvential
+
+
+2) functie pentru calcul paralel folosind p threaduri (constructie Thread folosind o clasa care extinde Thread sau implementeaza Runnanble)  - partitionare pe segmente - distribuitie liniara
+
+3)functie pentru calcul paralel folosind p threaduri (constructie Thread folosind o clasa care extinde Thread sau implementeaza Runnanble)  - partionare prin - distribuitie ciclica
+
+Analiza pentru diferite valori ale lui n si p.
+Analiza pentru varianta c[i]=a[i]+b[i] si pentru c[i]= Math.pow(a[i],3)+Math.pow(b[i],3)

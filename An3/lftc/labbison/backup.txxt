@@ -1,0 +1,29 @@
+program_declaration : include_list NAMESPACE TYPE main_declaration
+
+include_list: include_single
+            | include_list include_single
+include_single: HASHTAG INCLUDE LANGLE LIBRARY RANGLE
+
+main_declaration : MAIN LPAREN RPAREN LBRACE statement_list RBRACE
+
+statement_list : statement_list statement
+               | statement
+
+statement : declaration_list
+          | RETURN expression SEMICOLON
+          | PRINTF LPAREN STRING COMMA argument_list RPAREN SEMICOLON
+          | CIN RSHIFT IDENTIFIER SEMICOLON
+          | COUT LSHIFT expression SEMICOLON
+          | FOR LPAREN TYPE IDENTIFIER EQUALS expression SEMICOLON IDENTIFIER LANGLE expression SEMICOLON IDENTIFIER PLUS PLUS RPAREN LBRACE statement_list RBRACE
+          | assignment SEMICOLON
+declaration_list : TYPE declarations
+declarations: IDENTIFIER SEMICOLON
+            | IDENTIFIER EQUALS expression SEMICOLON
+            | IDENTIFIER COMMA declarations
+assignment: IDENTIFIER EQUALS expression
+argument_list : argument_list COMMA expression
+              | expression
+
+expression : NUMBER PLUS NUMBER
+              | IDENTIFIER
+              | NUMBER | IDENTIFIER PLUS IDENTIFIER

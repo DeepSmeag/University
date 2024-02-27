@@ -1,0 +1,61 @@
+private void receiveFile(Socket serverSocket) {
+        try {
+            InputStream inputStream = serverSocket.getInputStream();
+            DataInputStream in = new DataInputStream(inputStream);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            
+            // Receive file name from server
+            String fileName = reader.readLine();
+            while ((fileName = reader.readLine()) == null) {
+                try {
+                    System.out.println("Client: Waiting for file name...");
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            // Receive file length in bytes from server
+            String stringLength = reader.readLine();
+            System.out.println("TMP: " + stringLength + " " + fileName);
+            long fileLength = Long.parseLong(stringLength);
+            System.out.println("Client: Receiving file '" + fileName + "' (" + fileLength + " bytes)...");
+            // Construct the full path for the file inside the specified folder
+            String folderName = "client" + countryId;
+            String fullPath = folderName + File.separator + fileName;
+            // Create the folder if it doesn't exist
+            File folder = new File(folderName);
+            if (!folder.exists()) {
+                if (folder.mkdirs()) {
+                    System.out.println("Client: Folder '" + folderName + "' created.");
+                } else {
+                    System.out.println("Client: Failed to create folder '" + folderName + "'.");
+                    return;
+                }
+            }
+            try (FileOutputStream fileOutputStream = new FileOutputStream(fullPath);
+                    BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream)) {
+                byte[] buffer = new byte[(int) Math.min(1024, fileLength)]; // Use a buffer size that doesn't exceed
+                                                                            // fileLength
+                int bytesRead;
+                int remainingBytes = (int) fileLength;
+
+                while (remainingBytes > 0
+                        && (bytesRead = inputStream.read(buffer, 0, Math.min(buffer.length, remainingBytes))) != -1) {
+                    bufferedOutputStream.write(buffer, 0, bytesRead);
+                    remainingBytes -= bytesRead;
+                }
+                bufferedOutputStream.flush();
+                System.out.println("Client: remaining " + remainingBytes + " bytes");
+                // Receive ending message from server
+                String endingMessage = reader.readLine();
+                if ("FileTransferDone".equals(endingMessage)) {
+                    System.out.println("Client: File '" + fileName + "' received successfully.");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }

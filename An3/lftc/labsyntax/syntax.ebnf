@@ -1,0 +1,62 @@
+program = whitespace
+					[includes]
+					whitespace
+					 "using namespace std;"
+					whitespace
+					{[declaration]}
+					whitespace
+					 "int main()" whitespace
+							"{" 
+							[list_instructions] 
+							"return" whitespace (integer | "0") whitespace ";" whitespace
+							"}";
+(*General usage*)
+whitespace = {" " | "\t" | "\n" | "\r"};
+comments = {whitespace "//" [" "] any_character "\n" whitespace};
+any_character = {[letter | digit | character]};
+includes = ("#include " "<" library ">" "\n")+;
+library = "iostream" | "cmath";
+list_instructions = whitespace {instruction} whitespace;
+instruction = declaration | attribution | input | output | if_statement | loopfor | loopwhile | comments;
+
+(*Defining names / types and attributing values*)
+declaration = whitespace type ["const "] identifier [" = " {expression}] { ", " identifier [" = " expression]}  ";";
+type = "int " | "float " | "char " | "double " | "custom ";
+identifier = letter { letter | digit };
+letter = "A" | "B" | "C" | "D" | "E" | "F" | "G"
+       | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+       | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+       | "V" | "W" | "X" | "Y" | "Z" | "a" | "b"
+       | "c" | "d" | "e" | "f" | "g" | "h" | "i"
+       | "j" | "k" | "l" | "m" | "n" | "o" | "p"
+       | "q" | "r" | "s" | "t" | "u" | "v" | "w"
+       | "x" | "y" | "z";
+attribution = identifier " = " (constant | expression) ";";
+constant = integer | decimal | character | "0";
+integer = ["+"|"-"] digit_nonzero {digit};
+digit_nonzero = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+digit = "0" | digit_nonzero;
+decimal = integer ["." digit+];
+character = letter | "_" | "?" | "!" | " " | "=" | "" | "+" | "-" | "*" | "/" | "^";
+
+(*I/O operations*)
+input = whitespace "cin" (" >> " identifier)+ ";";
+output = whitespace "cout" (" << " ('"'stringliteral'"' | expression | "endl"))+ ";";
+stringliteral = {character | digit};
+expression = whitespace (constant | identifier | arithmetic_expression | logical_expression) whitespace;
+arithmetic_expression = whitespace term { ( " + " | " - " ) term} whitespace;
+logical_expression = whitespace arithmetic_expression ( " != " | " == " | " < " | " > " ) arithmetic_expression whitespace;
+term = whitespace factor { ( " * " | " / " ) factor whitespace} ;
+factor = whitespace (identifier | constant) | " ( " expression " ) " whitespace ;
+
+
+(*IF cond*)
+if_statement = whitespace "if" " ( " expression " )" whitespace (block | instruction) whitespace [ "else" whitespace ( block | if_statement | instruction) ];
+block = "{" whitespace list_instructions whitespace "}";
+
+(*For loop*)
+loopfor = whitespace "for" " ( " [declarationfor] whitespace ";" whitespace expression whitespace ";" whitespace attributionfor whitespace " )" whitespace block;
+declarationfor = whitespace type ["const "] identifier [" = " {expression}] { ", " identifier [" = " expression]} ;
+attributionfor = identifier " = " (constant | expression) ;
+(*While loop*)
+loopwhile = whitespace "while" whitespace " ( " whitespace expression whitespace " )" whitespace block;

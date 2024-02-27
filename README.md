@@ -35,3 +35,23 @@ Repo for College assignments / projects
 - PW
 - MPP
 - ISS
+
+## An3
+
+### Sem1
+
+- PPD
+- LFTC
+- PDM
+- VR
+- CVDL
+- DIP
+
+### Sem2
+
+- NLP
+- VVSS
+- CN
+- IoT
+- Licenta / Bachelor's Thesis
+- Etica & Integritate in Informatica

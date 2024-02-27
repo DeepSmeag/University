@@ -1,0 +1,29 @@
+<comment> ::= "//" <comment_text>
+
+<comment_text> ::= <any_character> | <comment_text> <any_character>
+
+<any_character> ::= <letter> | <digit> | <symbol> | <space> | <newline>
+
+<even_0s> ::= <state_declaration> <alphabet_declaration> <start_state_declaration> <accepting_states_declaration> <transitions_declaration>
+
+<state_declaration> ::= "States:" <state_list>
+
+<state_list> ::= <state> | <state> <state_list>
+<state> ::= <state_name>
+
+<alphabet_declaration> ::= "Alphabet:" <symbol_list>
+
+<symbol_list> ::= <symbol> | <symbol> <symbol_list>
+<symbol> ::= <symbol_name>
+
+<start_state_declaration> ::= "Start State:" <state_name>
+
+<accepting_states_declaration> ::= "Accepting States:" <accepting_state_list>
+
+<accepting_state_list> ::= <state> | <state> <accepting_state_list>
+
+<transitions_declaration> ::= "Transitions:" <transition_list>
+
+<transition_list> ::= <transition> | <transition> <transition_list>
+
+<transition> ::= <state_name> <symbol_name> <state_name>

@@ -1,0 +1,14 @@
+Average output for 10 runs with 10 rows, 10 cols and 1 threads: 3 ms
+Average output for 10 runs with 10 rows, 10 cols and 2 threads: 4.9 ms
+------------------------------------------
+Average output for 10 runs with 1000 rows, 1000 cols and 1 threads: 39.7 ms
+Average output for 10 runs with 1000 rows, 1000 cols and 2 threads: 42.3 ms
+Average output for 10 runs with 1000 rows, 1000 cols and 4 threads: 71.7 ms
+Average output for 10 runs with 1000 rows, 1000 cols and 8 threads: 92.8 ms
+Average output for 10 runs with 1000 rows, 1000 cols and 16 threads: 91.7 ms
+------------------------------------------
+Average output for 10 runs with 10000 rows, 10000 cols and 1 threads: 1099.3 ms
+Average output for 10 runs with 10000 rows, 10000 cols and 2 threads: 634.5 ms
+Average output for 10 runs with 10000 rows, 10000 cols and 4 threads: 461.6 ms
+Average output for 10 runs with 10000 rows, 10000 cols and 8 threads: 470.2 ms
+Average output for 10 runs with 10000 rows, 10000 cols and 16 threads: 573.3 ms

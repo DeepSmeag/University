@@ -1,0 +1,6 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  E:\CodingAndDev\Projects\facultate\ppd\labcuda\labcuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "E:\Programe\VSCommunity\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o E:\CodingAndDev\Projects\facultate\ppd\labcuda\labcuda\x64\Debug\kernel.cu.obj "E:\CodingAndDev\Projects\facultate\ppd\labcuda\labcuda\kernel.cu" 
+  kernel.cu
+  tmpxft_00006da0_00000000-7_kernel.cudafe1.cpp
+  labcuda.vcxproj -> E:\CodingAndDev\Projects\facultate\ppd\labcuda\x64\Debug\labcuda.exe

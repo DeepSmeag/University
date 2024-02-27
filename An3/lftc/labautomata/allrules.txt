@@ -1,0 +1,25 @@
+States: q0 q1
+Alphabet: #include < > iostream using namespace std ; int main ( ) { } , cin << >> for = + return
+Start State: q0
+Accepting States: q1
+Transitions:
+q0 #include q1
+q0 << q1
+q0 >> q1
+q0 <iostream> q1
+q0 using q1
+q0 namespace q1
+q0 std q1
+q0 ; q1
+q0 int q1
+q0 main q1
+q0 ( q1
+q0 ) q1
+q0 { q1
+q0 } q1
+q0 , q1
+q0 cin q1
+q0 for q1
+q0 = q1
+q0 + q1
+q0 return q1

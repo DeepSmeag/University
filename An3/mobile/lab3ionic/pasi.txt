@@ -1,0 +1,22 @@
+- Camera XXXXXXXXXXXX
+	In edit - take photo 
+		photo gallery project shows 
+	Show photo in edit / list
+		photo gallery project shows
+	Save photo in local space (Capacitor saves it in IndexedDB)
+		photo gallery project shows
+	Upload to server
+		how to send photo? as base64 encoded? send that and file name? send just the file name and rely on the client to load it based on the name??
+		requirement only says upload, not necessarily the photo as I understand it
+- Fisiere XXXXXXXXXXX
+	be able to save photo to device and on server
+		on device via Capacitor FileSystem
+		on server how??? - not sending photo, but sending
+- Maps XXXXXXXXXXX
+	using the ionic library, the react one doesn't work at first glance so why bother
+	create new info about object - long, lat; this is what I save to the server;
+	click on map to pinpoint location, save that location for future reference (both points are here, being able to pin and save that pin)
+	the long and lat attributes are changed when I click on the map, so that's what I save with the object
+- Animatii XXXXXXXXX
+	animate something with your own animation
+	override default animation for some components (ex: button for save)

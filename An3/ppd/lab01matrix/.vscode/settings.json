@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.m": "octave",
+        "*.css": "css",
+        "iosfwd": "cpp",
+        "fstream": "cpp",
+        "thread": "cpp",
+        "chrono": "cpp",
+        "ostream": "cpp"
+    },
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "cppcoreguidelines-owning-memory",
+        "clang-diagnostic-error"
+    ]
+}

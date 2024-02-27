@@ -1,0 +1,11 @@
+Automat = <lista stari> <lista stari finale> <alfabet> <stare initiala> <tranzitie>
+
+<lista stari> = "Stare" <stare> | "Stare" <stare> <lista stari>
+<stare> = <simbolInceput> | <simbolInceput><simboluri>
+<simbolInceput> = A | B | ... | Z
+<simboluri> = <simbol> | <simbol> <simboluri>
+<simbol> = a | b | ... | z | 0 | 1 | ... | 9
+<lista stari finale> = "StareFinala" <stare> | "StareFinal" <stare> <lista stari>
+<alfabet> = <simbol> | <simbolInceput>
+<stare initiala> = "StareInitiala> <stare> | "StareInitiala" <stare> <lista stari>
+<tranzitie> = "Tranzitie" <stare> <alfabet> <stare>

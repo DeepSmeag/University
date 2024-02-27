@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int mamamalalal;
+    int n, s = 0;
+    cin >> n;
+    for (int i = 0; i < n; i = i + 1)
+    {
+        int x;
+        cin >> x;
+        s = s + x;
+    }
+    return 0;
+}

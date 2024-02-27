@@ -1,0 +1,6 @@
+AutomatFinit
+ stari: Set<String> /** Multimea tuturor starilor din automat */
+ alfabet: Set<String> /** Multimea simbolurilor pe care opereaza automatul finit **/
+ tranzitii: MultiMap<Tuple> /** Tablou de dispersie cu chei Tuplu reprezentand starea initiala si simbolul care creeaza tranzitia catre urmatoarea stare, aceea fiind valoarea corespunzatoare cheii **/
+ stari_finale: Set<String> /** Multimea starilor acceptate la final **/
+stare_initiala: String | null /** Starea initiala, de plecare **/

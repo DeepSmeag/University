@@ -1,0 +1,10 @@
+States: q0 q1 q2
+Alphabet: a b
+Start State: q0
+Accepting States: q2
+Transitions:
+q0 a q1
+q1 a q1
+q1 b q2
+q2 b q2
+// these rules verify that we have a^m b^n, m and n at least 1
