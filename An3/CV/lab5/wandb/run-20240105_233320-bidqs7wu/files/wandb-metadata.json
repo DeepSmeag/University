@@ -1,0 +1,40 @@
+{
+    "os": "macOS-13.6-arm64-arm-64bit",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-01-05T21:33:23.435025",
+    "startedAt": "2024-01-05T21:33:20.195779",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--decay=1e-05",
+        "--dropout=0.15",
+        "--epochs=27",
+        "--hidden_layer_size=96",
+        "--layer_1_size=14",
+        "--layer_2_size=32",
+        "--learn_rate=0.01",
+        "--momentum=0.95"
+    ],
+    "state": "running",
+    "program": "/Users/cosmin/Dev/Projects/CV/lab5/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "Cosmins-MacBook-Pro-2.local",
+    "username": "cosmin",
+    "executable": "/Users/cosmin/Dev/.venv/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 9.128692626953125
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

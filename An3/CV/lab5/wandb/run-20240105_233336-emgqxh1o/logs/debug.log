@@ -1,0 +1,28 @@
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Current SDK version is 0.16.1
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Configure stats pid to 41453
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Loading settings from /Users/cosmin/.config/wandb/settings
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Loading settings from /Users/cosmin/Dev/Projects/CV/lab5/wandb/settings
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'deepsmeag', 'project': 'uncategorized', 'sweep_id': 'qkv45mu2', 'root_dir': '/Users/cosmin/Dev/Projects/CV/lab5', 'run_id': 'emgqxh1o', 'sweep_param_path': '/Users/cosmin/Dev/Projects/CV/lab5/wandb/sweep-qkv45mu2/config-emgqxh1o.yaml'}
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/Users/cosmin/Dev/Projects/CV/lab5/train.py', 'program': '/Users/cosmin/Dev/Projects/CV/lab5/train.py'}
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_init.py:_log_setup():524] Logging user logs to /Users/cosmin/Dev/Projects/CV/lab5/wandb/run-20240105_233336-emgqxh1o/logs/debug.log
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_init.py:_log_setup():525] Logging internal logs to /Users/cosmin/Dev/Projects/CV/lab5/wandb/run-20240105_233336-emgqxh1o/logs/debug-internal.log
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_init.py:init():564] calling init triggers
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_init.py:init():571] wandb.init called with sweep_config: {'decay': 1e-07, 'dropout': 0.2, 'epochs': 27, 'hidden_layer_size': 128, 'layer_1_size': 18, 'layer_2_size': 28, 'learn_rate': 0.003, 'momentum': 0.95}
+config: {'dropout': 0.2, 'hidden_layer_size': 128, 'layer_1_size': 16, 'layer_2_size': 32, 'learn_rate': 0.01, 'decay': 1e-06, 'momentum': 0.9, 'epochs': 27}
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_init.py:init():614] starting backend
+2024-01-05 23:33:36,392 INFO    MainThread:41453 [wandb_init.py:init():618] setting up manager
+2024-01-05 23:33:36,394 INFO    MainThread:41453 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-01-05 23:33:36,395 INFO    MainThread:41453 [wandb_init.py:init():624] backend started and connected
+2024-01-05 23:33:36,399 INFO    MainThread:41453 [wandb_run.py:_config_callback():1342] config_cb None None {'decay': 1e-07, 'dropout': 0.2, 'epochs': 27, 'hidden_layer_size': 128, 'layer_1_size': 18, 'layer_2_size': 28, 'learn_rate': 0.003, 'momentum': 0.95}
+2024-01-05 23:33:36,400 INFO    MainThread:41453 [wandb_init.py:init():716] updated telemetry
+2024-01-05 23:33:36,400 INFO    MainThread:41453 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-01-05 23:33:36,813 INFO    MainThread:41453 [wandb_run.py:_on_init():2254] communicating current version
+2024-01-05 23:33:37,002 INFO    MainThread:41453 [wandb_run.py:_on_init():2263] got version response 
+2024-01-05 23:33:37,002 INFO    MainThread:41453 [wandb_init.py:init():800] starting run threads in backend
+2024-01-05 23:33:37,025 INFO    MainThread:41453 [wandb_run.py:_console_start():2233] atexit reg
+2024-01-05 23:33:37,025 INFO    MainThread:41453 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2024-01-05 23:33:37,025 INFO    MainThread:41453 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2024-01-05 23:33:37,025 INFO    MainThread:41453 [wandb_run.py:_redirect():2178] Redirects installed.
+2024-01-05 23:33:37,026 INFO    MainThread:41453 [wandb_init.py:init():841] run started, returning control to user process
+2024-01-05 23:33:42,053 WARNING MsgRouterThr:41453 [router.py:message_loop():77] message_loop has been closed

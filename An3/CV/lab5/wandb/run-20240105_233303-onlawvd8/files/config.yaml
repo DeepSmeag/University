@@ -1,0 +1,54 @@
+wandb_version: 1
+
+decay:
+  desc: null
+  value: 1.0e-07
+dropout:
+  desc: null
+  value: 0.3
+epochs:
+  desc: null
+  value: 27
+hidden_layer_size:
+  desc: null
+  value: 148
+layer_1_size:
+  desc: null
+  value: 10
+layer_2_size:
+  desc: null
+  value: 32
+learn_rate:
+  desc: null
+  value: 0.001
+momentum:
+  desc: null
+  value: 0.9
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.5
+    cli_version: 0.16.1
+    framework: keras
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1704490383.958175
+    t:
+      1:
+      - 2
+      - 3
+      - 55
+      2:
+      - 2
+      - 3
+      - 55
+      3:
+      - 16
+      - 23
+      - 37
+      4: 3.11.5
+      5: 0.16.1
+      8:
+      - 4
+      - 5
+      13: darwin-arm64

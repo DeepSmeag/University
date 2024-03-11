@@ -1,0 +1,18 @@
+wandb_version: 1
+
+decay:
+  value: 1.0e-06
+dropout:
+  value: 0.2
+epochs:
+  value: 27
+hidden_layer_size:
+  value: 148
+layer_1_size:
+  value: 18
+layer_2_size:
+  value: 32
+learn_rate:
+  value: 0.001
+momentum:
+  value: 0.8

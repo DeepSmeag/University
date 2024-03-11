@@ -1,0 +1,164 @@
+2024-01-05 23:27:29 INFO Running runs: []
+2024-01-05 23:27:30 INFO Agent received command: run
+2024-01-05 23:27:30 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.4
+	epochs: 27
+	hidden_layer_size: 128
+	layer_1_size: 12
+	layer_2_size: 36
+	learn_rate: 0.001
+	momentum: 0.8
+2024-01-05 23:27:30 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.4 --epochs=27 --hidden_layer_size=128 --layer_1_size=12 --layer_2_size=36 --learn_rate=0.001 --momentum=0.8
+2024-01-05 23:27:35 INFO Running runs: ['m899kkq9']
+2024-01-05 23:27:45 INFO Cleaning up finished run: m899kkq9
+2024-01-05 23:27:45 INFO Agent received command: run
+2024-01-05 23:27:45 INFO Agent starting run with config:
+	decay: 1e-06
+	dropout: 0.15
+	epochs: 27
+	hidden_layer_size: 96
+	layer_1_size: 18
+	layer_2_size: 44
+	learn_rate: 0.001
+	momentum: 0.9
+2024-01-05 23:27:45 INFO About to run command: /usr/bin/env python train.py --decay=1e-06 --dropout=0.15 --epochs=27 --hidden_layer_size=96 --layer_1_size=18 --layer_2_size=44 --learn_rate=0.001 --momentum=0.9
+2024-01-05 23:27:50 INFO Running runs: ['6xwo4vym']
+2024-01-05 23:27:50 INFO Cleaning up finished run: 6xwo4vym
+2024-01-05 23:27:51 INFO Agent received command: run
+2024-01-05 23:27:51 INFO Agent starting run with config:
+	decay: 1e-07
+	dropout: 0.4
+	epochs: 27
+	hidden_layer_size: 128
+	layer_1_size: 18
+	layer_2_size: 28
+	learn_rate: 0.001
+	momentum: 0.95
+2024-01-05 23:27:51 INFO About to run command: /usr/bin/env python train.py --decay=1e-07 --dropout=0.4 --epochs=27 --hidden_layer_size=128 --layer_1_size=18 --layer_2_size=28 --learn_rate=0.001 --momentum=0.95
+2024-01-05 23:27:56 INFO Running runs: ['gaemrdiz']
+2024-01-05 23:27:56 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2024-01-05 23:27:56 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2024-01-05 23:29:43 INFO Running runs: []
+2024-01-05 23:29:44 INFO Agent received command: run
+2024-01-05 23:29:44 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.3
+	epochs: 27
+	hidden_layer_size: 128
+	layer_1_size: 16
+	layer_2_size: 44
+	learn_rate: 0.001
+	momentum: 0.8
+2024-01-05 23:29:44 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.3 --epochs=27 --hidden_layer_size=128 --layer_1_size=16 --layer_2_size=44 --learn_rate=0.001 --momentum=0.8
+2024-01-05 23:29:49 INFO Running runs: ['gi5nigvc']
+2024-01-05 23:29:49 INFO Cleaning up finished run: gi5nigvc
+2024-01-05 23:29:49 INFO Agent received command: run
+2024-01-05 23:29:49 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.15
+	epochs: 27
+	hidden_layer_size: 96
+	layer_1_size: 20
+	layer_2_size: 40
+	learn_rate: 0.001
+	momentum: 0.95
+2024-01-05 23:29:49 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.15 --epochs=27 --hidden_layer_size=96 --layer_1_size=20 --layer_2_size=40 --learn_rate=0.001 --momentum=0.95
+2024-01-05 23:29:54 INFO Running runs: ['rxa30ggf']
+2024-01-05 23:29:54 INFO Cleaning up finished run: rxa30ggf
+2024-01-05 23:29:54 INFO Agent received command: run
+2024-01-05 23:29:54 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.25
+	epochs: 27
+	hidden_layer_size: 128
+	layer_1_size: 18
+	layer_2_size: 40
+	learn_rate: 0.01
+	momentum: 0.8
+2024-01-05 23:29:54 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.25 --epochs=27 --hidden_layer_size=128 --layer_1_size=18 --layer_2_size=40 --learn_rate=0.01 --momentum=0.8
+2024-01-05 23:29:59 INFO Running runs: ['3psu3ji5']
+2024-01-05 23:29:59 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2024-01-05 23:29:59 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2024-01-05 23:31:13 INFO Running runs: []
+2024-01-05 23:31:13 INFO Agent received command: run
+2024-01-05 23:31:13 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.3
+	epochs: 27
+	hidden_layer_size: 96
+	layer_1_size: 12
+	layer_2_size: 28
+	learn_rate: 0.001
+	momentum: 0.95
+2024-01-05 23:31:13 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.3 --epochs=27 --hidden_layer_size=96 --layer_1_size=12 --layer_2_size=28 --learn_rate=0.001 --momentum=0.95
+2024-01-05 23:31:18 INFO Running runs: ['spbsnq9b']
+2024-01-05 23:31:18 INFO Cleaning up finished run: spbsnq9b
+2024-01-05 23:31:19 INFO Agent received command: run
+2024-01-05 23:31:19 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.4
+	epochs: 27
+	hidden_layer_size: 148
+	layer_1_size: 10
+	layer_2_size: 36
+	learn_rate: 0.001
+	momentum: 0.95
+2024-01-05 23:31:19 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.4 --epochs=27 --hidden_layer_size=148 --layer_1_size=10 --layer_2_size=36 --learn_rate=0.001 --momentum=0.95
+2024-01-05 23:31:24 INFO Running runs: ['f3e7akya']
+2024-01-05 23:31:24 INFO Cleaning up finished run: f3e7akya
+2024-01-05 23:31:24 INFO Agent received command: run
+2024-01-05 23:31:24 INFO Agent starting run with config:
+	decay: 1e-06
+	dropout: 0.2
+	epochs: 27
+	hidden_layer_size: 148
+	layer_1_size: 18
+	layer_2_size: 32
+	learn_rate: 0.001
+	momentum: 0.8
+2024-01-05 23:31:24 INFO About to run command: /usr/bin/env python train.py --decay=1e-06 --dropout=0.2 --epochs=27 --hidden_layer_size=148 --layer_1_size=18 --layer_2_size=32 --learn_rate=0.001 --momentum=0.8
+2024-01-05 23:31:29 INFO Running runs: ['f25eblsd']
+2024-01-05 23:31:29 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2024-01-05 23:31:29 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2024-01-05 23:33:01 INFO Running runs: []
+2024-01-05 23:33:01 INFO Agent received command: run
+2024-01-05 23:33:01 INFO Agent starting run with config:
+	decay: 1e-07
+	dropout: 0.3
+	epochs: 27
+	hidden_layer_size: 148
+	layer_1_size: 10
+	layer_2_size: 32
+	learn_rate: 0.001
+	momentum: 0.9
+2024-01-05 23:33:01 INFO About to run command: /usr/bin/env python train.py --decay=1e-07 --dropout=0.3 --epochs=27 --hidden_layer_size=148 --layer_1_size=10 --layer_2_size=32 --learn_rate=0.001 --momentum=0.9
+2024-01-05 23:33:06 INFO Running runs: ['onlawvd8']
+2024-01-05 23:33:11 INFO Cleaning up finished run: onlawvd8
+2024-01-05 23:33:17 INFO Agent received command: run
+2024-01-05 23:33:17 INFO Agent starting run with config:
+	decay: 1e-05
+	dropout: 0.15
+	epochs: 27
+	hidden_layer_size: 96
+	layer_1_size: 14
+	layer_2_size: 32
+	learn_rate: 0.01
+	momentum: 0.95
+2024-01-05 23:33:17 INFO About to run command: /usr/bin/env python train.py --decay=1e-05 --dropout=0.15 --epochs=27 --hidden_layer_size=96 --layer_1_size=14 --layer_2_size=32 --learn_rate=0.01 --momentum=0.95
+2024-01-05 23:33:22 INFO Running runs: ['bidqs7wu']
+2024-01-05 23:33:33 INFO Cleaning up finished run: bidqs7wu
+2024-01-05 23:33:33 INFO Agent received command: run
+2024-01-05 23:33:33 INFO Agent starting run with config:
+	decay: 1e-07
+	dropout: 0.2
+	epochs: 27
+	hidden_layer_size: 128
+	layer_1_size: 18
+	layer_2_size: 28
+	learn_rate: 0.003
+	momentum: 0.95
+2024-01-05 23:33:33 INFO About to run command: /usr/bin/env python train.py --decay=1e-07 --dropout=0.2 --epochs=27 --hidden_layer_size=128 --layer_1_size=18 --layer_2_size=28 --learn_rate=0.003 --momentum=0.95
+2024-01-05 23:33:38 INFO Running runs: ['emgqxh1o']
+2024-01-05 23:33:43 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2024-01-05 23:33:43 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true

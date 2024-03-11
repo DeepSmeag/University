@@ -1,0 +1,23 @@
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz
+29515/29515 [==============================] - 0s 1us/step
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-images-idx3-ubyte.gz
+26421880/26421880 [==============================] - 3s 0us/step
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-labels-idx1-ubyte.gz
+5148/5148 [==============================] - 0s 0us/step
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-images-idx3-ubyte.gz
+4422102/4422102 [==============================] - 1s 0us/step
+WARNING:absl:At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.
+WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.SGD.
+Traceback (most recent call last):
+  File "/Users/cosmin/Dev/Projects/CV/lab5/train.py", line 54, in <module>
+    sgd = SGD(lr=config.learn_rate, decay=config.decay, momentum=config.momentum,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cosmin/Dev/.venv/lib/python3.11/site-packages/keras/src/optimizers/sgd.py", line 114, in __init__
+    super().__init__(
+  File "/Users/cosmin/Dev/.venv/lib/python3.11/site-packages/keras/src/optimizers/optimizer.py", line 1084, in __init__
+    super().__init__(
+  File "/Users/cosmin/Dev/.venv/lib/python3.11/site-packages/keras/src/optimizers/optimizer.py", line 106, in __init__
+    self._process_kwargs(kwargs)
+  File "/Users/cosmin/Dev/.venv/lib/python3.11/site-packages/keras/src/optimizers/optimizer.py", line 135, in _process_kwargs
+    raise ValueError(
+ValueError: decay is deprecated in the new Keras optimizer, please check the docstring for valid arguments, or use the legacy optimizer, e.g., tf.keras.optimizers.legacy.SGD.

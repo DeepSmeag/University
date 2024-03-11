@@ -1,0 +1,79 @@
+
+[INFO] training the network...
+  0%|          | 0/10 [00:00<?, ?it/s]
+[INFO] EPOCH: 1/10
+
+
+ 20%|██        | 2/10 [00:20<01:23, 10.39s/it]
+[INFO] EPOCH: 2/10
+ 20%|██        | 2/10 [00:25<01:43, 12.97s/it]
+  0%|          | 0/10 [00:00<?, ?it/s]
+[INFO] training the network...
+[INFO] EPOCH: 1/10
+
+ 10%|█         | 1/10 [00:10<01:35, 10.64s/it]
+[INFO] EPOCH: 2/10
+ 20%|██        | 2/10 [00:20<01:23, 10.45s/it][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'train_loss': 0.061086636036634445, 'test_loss': 0.07414469122886658, 'meanPixelAcc': 0.0, '_timestamp': 1704487097.141885}).
+[INFO] EPOCH: 3/10
+Train loss: 0.059292, Test loss: 0.0000
+ 30%|███       | 3/10 [00:31<01:12, 10.33s/it]
+[INFO] EPOCH: 4/10
+
+ 40%|████      | 4/10 [00:41<01:01, 10.26s/it]
+[INFO] EPOCH: 5/10
+
+ 50%|█████     | 5/10 [00:51<00:50, 10.18s/it]
+[INFO] EPOCH: 6/10
+
+ 60%|██████    | 6/10 [01:01<00:40, 10.14s/it]
+[INFO] EPOCH: 7/10
+
+ 70%|███████   | 7/10 [01:11<00:30, 10.16s/it]
+[INFO] EPOCH: 8/10
+
+ 80%|████████  | 8/10 [01:21<00:20, 10.16s/it]
+[INFO] EPOCH: 9/10
+
+
+100%|██████████| 10/10 [01:42<00:00, 10.23s/it]
+[INFO] EPOCH: 10/10
+Train loss: 0.059320, Test loss: 0.0000
+[INFO] total time taken to train the model: 102.25s
+  0%|          | 0/10 [00:00<?, ?it/s]
+[INFO] training the network...
+[INFO] EPOCH: 1/10
+
+
+ 10%|█         | 1/10 [00:12<01:56, 12.99s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 9. Dropping entry: {'train_loss': 0.05991679057478905, 'test_loss': 0.07080521434545517, 'meanPixelAcc': 0.0, '_timestamp': 1704487968.359661}).
+[INFO] EPOCH: 2/10
+Train loss: 0.059270, Test loss: 0.0000
+
+ 20%|██        | 2/10 [00:25<01:41, 12.74s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 9. Dropping entry: {'train_loss': 0.05926951766014099, 'test_loss': 0.07109950482845306, 'meanPixelAcc': 0.0, '_timestamp': 1704487981.0355048}).
+[INFO] EPOCH: 3/10
+Train loss: 0.059276, Test loss: 0.0000
+ 20%|██        | 2/10 [00:37<02:30, 18.87s/it]
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 9. Dropping entry: {'train_loss': 0.05927596613764763, 'test_loss': 0.06879808753728867, 'meanPixelAcc': 0.0, '_timestamp': 1704487993.951523}).
+  0%|          | 0/10 [00:00<?, ?it/s]
+[INFO] training the network...
+[INFO] EPOCH: 1/10
+
+ 10%|█         | 1/10 [00:13<02:01, 13.50s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 9. Dropping entry: {'train_loss': 0.05973280966281891, 'test_loss': 0.07088052481412888, 'meanPixelAcc': 0.0, '_timestamp': 1704488023.3801339}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 9. Dropping entry: {'predictions': {'_type': 'table-file', 'sha256': '5c4ebdee7a4b5d6802ff790aae4d8284270e67e8c522970489cb03536bf9353d', 'size': 2617, 'artifact_path': 'wandb-client-artifact://65qco3ia8dxtwezcl5p88oh1npte3f8t3cqgbwo9ma7f93wlsbzi75popjzlo2onfcoe9z02t6g5lidbx64p7ni08qo4ucdxany45t8z203o7301fpwuojwgh7yxogkb/predictions.table.json', '_latest_artifact_path': 'wandb-client-artifact://m8yzsqn6siqrw6aft2o8qy0sm2l6sff05124tt7ywvu75on2fqp5bz6fzbvcbnd8w670nm9d0qdqbcjbg4b1srqpybupsi4kxlbc9h0v4xj9aqc1iwzn9573bnk6hfkg:latest/predictions.table.json', 'path': 'media/table/predictions_9_5c4ebdee7a4b5d6802ff.table.json', 'ncols': 2, 'nrows': 100}, '_timestamp': 1704488026.646992}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 9. Dropping entry: {'train_loss': 0.05938364565372467, 'test_loss': 0.06928958743810654, 'meanPixelAcc': 0.0, '_timestamp': 1704488037.170453}).
+[INFO] EPOCH: 2/10
+Train loss: 0.059384, Test loss: 0.0000
+ 20%|██        | 2/10 [00:26<01:47, 13.45s/it]
+[INFO] EPOCH: 3/10
+ 20%|██        | 2/10 [00:26<01:47, 13.45s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 9. Dropping entry: {'predictions': {'_type': 'table-file', 'sha256': '2e687b5cc433f9fcd1798ae1a45cf769dfffe0d4a50fd617d64f2c6cc65ebd93', 'size': 2617, 'artifact_path': 'wandb-client-artifact://rwx3mu396tbm9wygym5ee722isar0nu5s0bhiwngyzr1dgs6t95ihufk2n4rvaz6opaserdmkfuqd789rk0h4ojqt140r3isquggjce2hkf7n3x4wa045k4pcr0mmqs1/predictions.table.json', '_latest_artifact_path': 'wandb-client-artifact://4qk6kcc4akdmh3st3s7e6gojhf65da6p1gitiwg0jlqsp2onxmv8y1xzeqw6m9l5n3c4nkle8qp6dhmprzy4nmqfazif33h6aoz30pjtt9wc1p7k4iuj19bfb6dxzkjl:latest/predictions.table.json', 'path': 'media/table/predictions_9_2e687b5cc433f9fcd179.table.json', 'ncols': 2, 'nrows': 100}, '_timestamp': 1704488040.065793}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 9. Dropping entry: {'train_loss': 0.0588359609246254, 'test_loss': 0.06944092363119125, 'meanPixelAcc': 0.0, '_timestamp': 1704488050.360995}).
+ 30%|███       | 3/10 [00:40<01:33, 13.29s/it]
+[INFO] EPOCH: 4/10
+ 40%|████      | 4/10 [00:53<01:19, 13.17s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 9. Dropping entry: {'predictions': {'_type': 'table-file', 'sha256': 'ef6218372f40a9fbbc9c34366be743df47d1fe3de5358ff406a4a65302ebc623', 'size': 2617, 'artifact_path': 'wandb-client-artifact://yf9of2kscswpu0ux4ujfnspxq1henuhle0xddcopfkxuwuxv6dsc8j0htypngw0cwh5blppphlo8lymp7ve34vxo9uosth5tjxzi0n8lk6wvje1k8z9sm9309h1v5tfv/predictions.table.json', '_latest_artifact_path': 'wandb-client-artifact://qwhyqmfq28j64101b0x55q1z4cmv2j3jspvbv250bdt0mrejdpwfo3rqx1y8r4h5oeprrj8hjkyhlf3fnuqhhjgq2nkmloshva3a3w9c9z9bpavmlzrijhp90h485xb7:latest/predictions.table.json', 'path': 'media/table/predictions_9_ef6218372f40a9fbbc9c.table.json', 'ncols': 2, 'nrows': 100}, '_timestamp': 1704488053.162741}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 9. Dropping entry: {'train_loss': 0.06015007197856903, 'test_loss': 0.07008682936429977, 'meanPixelAcc': 0.0, '_timestamp': 1704488063.3548632}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 9. Dropping entry: {'predictions': {'_type': 'table-file', 'sha256': '6a489b8462e5b0dd472ce1b0df94e6729d4ab1f99f13c2b2c066a0be4a262575', 'size': 2617, 'artifact_path': 'wandb-client-artifact://olvav8razy6e89ywygo4vvp3zpg0yefngnrwrsxghlmhi06vcdmac51nupfc9se53s9maicdkzx60gi8zk9gom0fyv3pi5zywigcgh0ly87uukzpjbza55m2mykvog60/predictions.table.json', '_latest_artifact_path': 'wandb-client-artifact://b0sjd2iitn5bz9ojegyrdepqxnql3dcjvzba8b56xdbjlxri2sx4xpzohgbuwsigzqvtoobamazhhj32l6rlasn1ytv8zjm1m0ov4hwusr8mepnqzv419tz1mv9bjuzp:latest/predictions.table.json', 'path': 'media/table/predictions_9_6a489b8462e5b0dd472c.table.json', 'ncols': 2, 'nrows': 100}, '_timestamp': 1704488066.147465}).
+[INFO] EPOCH: 5/10
+Train loss: 0.059620, Test loss: 0.0000
+ 50%|█████     | 5/10 [01:06<01:05, 13.13s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 4 is less than current step: 9. Dropping entry: {'train_loss': 0.059620391577482224, 'test_loss': 0.06886951625347137, 'meanPixelAcc': 0.0, '_timestamp': 1704488076.43415}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 4 is less than current step: 9. Dropping entry: {'predictions': {'_type': 'table-file', 'sha256': '7041add1c63699b4ab474716a158552e4dc1a399f2c499daff1e9a04c9f55578', 'size': 2617, 'artifact_path': 'wandb-client-artifact://ln88hpe9yoik0u9zzhhhaq880au7zjzoln1xljrccob11d5zyyiv4tr95zot2x17d7zlw49zka72jazolhn6h89l4m7sf22b0je9xwqybfswhrt95wx8kwdg6tr0rgfo/predictions.table.json', '_latest_artifact_path': 'wandb-client-artifact://yi0dk8kehyey5wsyjwjvmpwps0ws6uje4rnplltdsmdm40g97e6pfkjxv7ea7d7tqt8wudxvoob8vvb0aukoukr4hf37rlo9fgbl83wmxdmft3jykigd1qwxvwe24vxd:latest/predictions.table.json', 'path': 'media/table/predictions_9_7041add1c63699b4ab47.table.json', 'ncols': 2, 'nrows': 100}, '_timestamp': 1704488079.2119281}).
+ 50%|█████     | 5/10 [01:16<01:16, 15.29s/it]
