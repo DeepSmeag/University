@@ -1,0 +1,2 @@
+nlpcube (github/adobe/NLP-cube)
+spacy.io

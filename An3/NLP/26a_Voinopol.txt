@@ -1,0 +1,30 @@
+[ 
+"Jocurile Olimpice" 
+],
+[ 
+"învins-o" 
+],
+[ 
+"meciurile" 
+],
+[ 
+"construit" 
+],
+[ 
+"Argentina" 
+],
+[ 
+"celelalte" 
+],
+[ 
+"Centenario" 
+],
+[ 
+"propunerile" 
+],
+[ 
+"înscris" 
+],
+[ 
+"câștigat Campionatul" 
+]
