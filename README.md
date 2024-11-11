@@ -1,4 +1,4 @@
-# Facultate ✔️✍🏻
+# University ✔️✍🏻
 
 Repo for College assignments / projects
 
